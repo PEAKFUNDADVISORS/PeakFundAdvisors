@@ -1,0 +1,38 @@
+/* PEAKFUND ADVISORS - MASTER STYLESHEET */
+:root {
+  --navy: #0A2540;
+  --navy-light: #1E3A5F;
+  --sky-blue: #4A9EFF;
+  --gold: #F5A623;
+  --white: #FFFFFF;
+  --charcoal: #0D0D0D;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background-color: var(--navy); color: var(--white); line-height: 1.6; }
+h1, h2, h3, .brand { font-family: 'Anton', sans-serif; letter-spacing: 1px; text-transform: uppercase; }
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: rgba(10, 37, 64, 0.95); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--navy-light); }
+.logo { font-size: 24px; color: var(--white); text-decoration: none; font-family: 'Anton', sans-serif; }
+.logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 30px; align-items: center; }
+.nav-links a { color: var(--white); text-decoration: none; font-weight: 500; font-size: 14px; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+.btn { background: var(--gold); color: var(--navy); padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: bold; font-family: 'Montserrat', sans-serif; transition: transform 0.2s; display: inline-block; }
+.btn:hover { transform: scale(1.05); }
+.hero { padding: 120px 5%; text-align: center; background: var(--navy); }
+.hero h1 { font-size: 4rem; margin-bottom: 20px; line-height: 1.1; }
+.hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px; color: #B8C7D9; }
+.hero-btns { display: flex; gap: 20px; justify-content: center; }
+.btn-outline { border: 2px solid var(--sky-blue); color: var(--sky-blue); padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: bold; }
+.btn-outline:hover { background: var(--sky-blue); color: var(--navy); }
+.funding-peak { padding: 80px 5%; text-align: center; }
+.funding-peak h2 { font-size: 2.5rem; margin-bottom: 40px; color: var(--gold); }
+.peaks-container { display: flex; justify-content: center; align-items: flex-end; gap: 20px; height: 300px; margin-bottom: 40px; }
+.peak-card { width: 200px; background: var(--sky-blue); padding: 10px; border-radius: 8px 8px 0 0; text-align: center; transition: transform 0.3s, background 0.3s; text-decoration: none; color: var(--white); clip-path: polygon(50% 0%, 100% 100%, 0% 100%); display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 20px; }
+.peak-card:hover { transform: translateY(-10px); background: var(--gold); color: var(--navy); }
+.peak-card h3 { font-size: 1rem; margin-bottom: 5px; }
+.peak-card p { font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 14px; }
+footer { background: var(--charcoal); padding: 40px 5%; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #333; }
+footer p { color: #888; font-size: 14px; }
+.social-row a { color: var(--sky-blue); font-size: 24px; margin-left: 15px; transition: color 0.2s, transform 0.2s; display: inline-block; }
+.social-row a:hover { color: var(--gold); transform: scale(1.1); }
+.container { max-width: 1200px; margin: 0 auto; padding: 80px 5%; }
