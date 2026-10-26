@@ -1,6 +1,6 @@
 /* PEAKFUND ADVISORS - GOLDEN HOUR THEME */
 :root {
-  --warm-ivory: #FDFBF7;   /* The warm background */
+  --warm-ivory: #F4EBD0;   /* A clear, soft cream/beige */
   --white: #FFFFFF;        
   --navy: #0A2540;         /* Header & Text */
   --sky-blue: #4A9EFF;     /* Accents */
@@ -10,10 +10,10 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* Body: Warm Ivory fading into Pure White */
+/* Body: Clear Cream fading into Pure White */
 body { 
     font-family: 'Inter', sans-serif; 
-    background: linear-gradient(180deg, var(--warm-ivory) 0%, var(--white) 50%);
+    background: linear-gradient(180deg, var(--warm-ivory) 0%, var(--white) 60%);
     background-color: var(--white); 
     background-repeat: no-repeat;
     background-attachment: fixed;
