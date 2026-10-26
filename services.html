@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | PEAKFUND ADVISORS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
+        .service-card { background: var(--navy-light); padding: 30px; border-radius: 8px; border-top: 4px solid var(--gold); }
+        .service-card h3 { color: var(--gold); margin-bottom: 10px; }
+        .service-card ul { list-style: none; margin-top: 15px; color: #B8C7D9; }
+        .service-card li { margin-bottom: 10px; padding-left: 20px; position: relative; }
+        .service-card li::before { content: "→"; position: absolute; left: 0; color: var(--sky-blue); }
+        @media (max-width: 768px) { .service-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">PEAK<span>FUND</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="success-stories.html">Success Stories</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="btn">Book a Call</a>
+        </div>
+    </nav>
+    <section class="container">
+        <h1 style="font-size: 3rem; margin-bottom: 20px;">Everything You Need to Launch, Fund & Scale</h1>
+        <p style="color: #B8C7D9; font-size: 1.2rem;">One team. Four stages. Full-stack funding support.</p>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>🏔️ STAGE 1: SECURE</h3>
+                <ul>
+                    <li><strong>Crowdfunding:</strong> Strategy, pre-launch, live campaign management.</li>
+                    <li><strong>Grant Writing:</strong> Research, writing, and submission support.</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>🚀 STAGE 2: LAUNCH</h3>
+                <ul>
+                    <li><strong>Pitch Deck Design:</strong> Investor-grade decks that close.</li>
+                    <li><strong>Press Release:</strong> Media-ready announcements that get picked up.</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>📈 STAGE 3: GROW</h3>
+                <ul>
+                    <li><strong>SEO Optimisation:</strong> Get found organically.</li>
+                    <li><strong>Social Media Marketing:</strong> Build audience, drive momentum.</li>
+                    <li><strong>Ads Management:</strong> Meta, Google, and Kickstarter ads that convert.</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3>🏆 STAGE 4: SUSTAIN</h3>
+                <ul>
+                    <li><strong>Investor Relations:</strong> Keep backers engaged.</li>
+                    <li><strong>Community Management:</strong> Nurture your base.</li>
+                    <li><strong>Advisory:</strong> Brand strategy & quarterly growth audits.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 PEAKFUND ADVISORS. All rights reserved.</p>
+        <div class="social-row">
+            <a href="https://www.facebook.com/share/1DsnXw8TES/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
