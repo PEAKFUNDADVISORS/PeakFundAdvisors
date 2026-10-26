@@ -21,7 +21,14 @@ body {
     line-height: 1.6; 
 }
 
-h1, h2, h3, .brand { font-family: 'Anton', sans-serif; letter-spacing: 1px; text-transform: uppercase; color: var(--navy); }
+/* HEADLINES: Swapped to Montserrat for the Funded Today look */
+h1, h2, h3, .brand { 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 800; /* Extra Bold */
+    letter-spacing: -1px; /* Tighter spacing for modern look */
+    text-transform: uppercase; 
+    color: var(--navy); 
+}
 
 /* HEADER: Solid Navy so it completely separates from the body */
 nav { 
@@ -29,16 +36,16 @@ nav {
     justify-content: space-between; 
     align-items: center; 
     padding: 20px 5%; 
-    background: var(--navy); /* Solid Navy */
+    background: var(--navy); 
     position: sticky; 
     top: 0; 
     z-index: 100; 
-    border-bottom: 2px solid var(--gold); /* Gold line for a premium touch */
+    border-bottom: 2px solid var(--gold); 
     box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
 }
 
-/* Header Text needs to be white now */
-.logo { font-size: 24px; color: var(--white); text-decoration: none; font-family: 'Anton', sans-serif; }
+/* Header Text */
+.logo { font-size: 24px; color: var(--white); text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: 0; }
 .logo span { color: var(--gold); }
 .nav-links { display: flex; gap: 30px; align-items: center; }
 .nav-links a { color: var(--white); text-decoration: none; font-weight: 600; font-size: 14px; transition: color 0.3s; }
@@ -47,7 +54,7 @@ nav {
 /* Buttons */
 .btn { background: var(--gold); color: var(--navy); padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: bold; font-family: 'Montserrat', sans-serif; transition: transform 0.2s, background 0.2s; display: inline-block; border: 2px solid var(--gold); }
 .btn:hover { transform: scale(1.05); background: var(--white); border-color: var(--white); color: var(--navy); }
-.btn-outline { border: 2px solid var(--navy); color: var(--navy); padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: bold; transition: all 0.3s; background: transparent; }
+.btn-outline { border: 2px solid var(--navy); color: var(--navy); padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: bold; font-family: 'Montserrat', sans-serif; transition: all 0.3s; background: transparent; }
 .btn-outline:hover { background: var(--navy); color: var(--white); }
 
 /* Hero Section */
