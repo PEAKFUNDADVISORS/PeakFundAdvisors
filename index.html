@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Custom Hero Layout for the Floating Card */
+        /* Hero Layout */
         .hero { padding: 80px 5% 100px; text-align: left; display: flex; align-items: center; justify-content: space-between; gap: 50px; max-width: 1200px; margin: 0 auto; }
         .hero-content { flex: 1; }
         .hero-content h1 { font-size: 4.5rem; margin-bottom: 20px; line-height: 1.1; }
         .hero-content p { font-size: 1.2rem; margin-bottom: 40px; color: var(--text-muted); }
         .hero-btns { display: flex; gap: 20px; }
         
-        /* The LaunchBoom Style Floating Card */
+        /* Floating Proof Card */
         .hero-card { flex: 0 0 400px; background: var(--white); border-radius: 12px; padding: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border: 1px solid #E2E8F0; transform: rotate(2deg); transition: transform 0.3s; }
         .hero-card:hover { transform: rotate(0deg) scale(1.02); }
         .hero-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
@@ -23,11 +23,29 @@
         .hero-card .amount { font-size: 1.8rem; color: var(--gold); font-family: 'Montserrat', sans-serif; font-weight: bold; }
         .hero-card .platform { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
 
+        /* 3 Pillar Section (Enventys Style) */
+        .pillars-section { padding: 80px 5%; background: var(--white); text-align: center; }
+        .pillars-section h2 { font-size: 2.5rem; margin-bottom: 60px; color: var(--navy); line-height: 1.2; }
+        .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        
+        .pillar-card { background: var(--off-white); border-radius: 8px; overflow: hidden; text-align: left; transition: transform 0.3s; border: 1px solid #E2E8F0; }
+        .pillar-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+        .pillar-card img { width: 100%; height: 250px; object-fit: cover; }
+        .pillar-content { padding: 30px; background: var(--white); border-top: 4px solid var(--gold); }
+        .pillar-content h3 { font-size: 1.4rem; margin-bottom: 15px; color: var(--navy); font-family: 'Anton', sans-serif; }
+        .pillar-content p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
+
+        /* Platform Strip */
+        .platform-strip { padding: 40px 5%; background: var(--navy); text-align: center; color: var(--white); display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+        .platform-strip p { font-size: 1.2rem; font-weight: 500; font-family: 'Montserrat', sans-serif; letter-spacing: 1px; opacity: 0.8; }
+
         @media (max-width: 900px) {
             .hero { flex-direction: column; text-align: center; }
             .hero-content h1 { font-size: 3rem; }
             .hero-btns { justify-content: center; }
-            .hero-card { display: none; /* Hide on mobile to keep it clean */ }
+            .hero-card { display: none; }
+            .pillars-grid { grid-template-columns: 1fr; }
+            .platform-strip { flex-direction: column; gap: 15px; }
         }
     </style>
 </head>
@@ -44,7 +62,7 @@
         </div>
     </nav>
 
-    <!-- NEW HERO SECTION WITH FLOATING CARD -->
+    <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
             <h1>Every Great Vision <br>Deserves Funding.</h1>
@@ -54,8 +72,6 @@
                 <a href="success-stories.html" class="btn-outline">See Success Stories</a>
             </div>
         </div>
-        
-        <!-- The Proof Card -->
         <div class="hero-card">
             <img src="images/misen.jpg" alt="Misen Dutch Oven">
             <p class="platform">Indiegogo Campaign</p>
@@ -63,6 +79,45 @@
             <p class="amount">$4,964,374 Raised</p>
         </div>
     </header>
+
+    <!-- NEW: All Under One Roof Section -->
+    <section class="pillars-section">
+        <h2>Crowdfunding, grants, and marketing<br>— all under one roof.</h2>
+        <div class="pillars-grid">
+            <!-- Pillar 1 -->
+            <div class="pillar-card">
+                <img src="images/service-fund.jpg" alt="Funding and Grants">
+                <div class="pillar-content">
+                    <h3>FUNDING & GRANTS</h3>
+                    <p>Crowdfunding strategy, grant research & writing, and business proposal preparation to secure your capital.</p>
+                </div>
+            </div>
+            <!-- Pillar 2 -->
+            <div class="pillar-card">
+                <img src="images/service-launch.jpg" alt="Launch and Design">
+                <div class="pillar-content">
+                    <h3>LAUNCH & DESIGN</h3>
+                    <p>Investor-grade pitch decks, press releases, and campaign page design to make sure your project gets seen.</p>
+                </div>
+            </div>
+            <!-- Pillar 3 -->
+            <div class="pillar-card">
+                <img src="images/service-grow.jpg" alt="Grow and Scale">
+                <div class="pillar-content">
+                    <h3>GROW & SCALE</h3>
+                    <p>SEO optimization, social media marketing, and paid ads management to drive momentum and hit your goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Platform Strip -->
+    <div class="platform-strip">
+        <p>KICKSTARTER</p>
+        <p>INDIEGOGO</p>
+        <p>GOFUNDME</p>
+        <p>SEED&SPARK</p>
+    </div>
 
     <!-- Who We Serve -->
     <section class="who-we-serve">
