@@ -11,13 +11,16 @@
         .service-row { display: flex; gap: 40px; margin-bottom: 80px; align-items: center; }
         .service-row:nth-child(even) { flex-direction: row-reverse; }
         .service-text { flex: 1; }
-        .service-text h3 { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; gap: 15px; }
-        .service-text h3 span { font-size: 4rem; color: rgba(74, 158, 255, 0.2); -webkit-text-stroke: 2px var(--sky-blue); }
+        .service-text h3 { font-size: 2.5rem; color: var(--navy); margin-bottom: 20px; display: flex; align-items: center; gap: 15px; }
+        .service-text h3 span { font-size: 4rem; color: transparent; -webkit-text-stroke: 2px var(--sky-blue); opacity: 0.5;}
         .service-text ul { list-style: none; }
-        .service-text li { margin-bottom: 15px; font-size: 1.1rem; color: #B8C7D9; padding-left: 25px; position: relative; }
+        .service-text li { margin-bottom: 15px; font-size: 1.1rem; color: var(--text-muted); padding-left: 25px; position: relative; }
         .service-text li::before { content: "→"; position: absolute; left: 0; color: var(--gold); font-weight: bold; }
-        .service-visual { flex: 1; background: var(--navy); border-radius: 12px; padding: 40px; text-align: center; border: 1px solid #2a4566; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-        .service-visual i { font-size: 5rem; color: var(--sky-blue); }
+        .service-text li strong { color: var(--navy); }
+        
+        .service-visual { flex: 1; background: var(--off-white); border-radius: 12px; padding: 40px; text-align: center; border: 1px solid #E2E8F0; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .service-visual i { font-size: 5rem; color: var(--gold); }
+        .service-visual h2 { color: var(--navy); margin-top: 20px; }
         
         @media (max-width: 768px) { 
             .service-row, .service-row:nth-child(even) { flex-direction: column; gap: 20px; } 
@@ -40,7 +43,7 @@
     
     <section class="container">
         <h1 style="font-size: 4rem; margin-bottom: 20px; text-align: center;">The 4 Stages of Success</h1>
-        <p style="color: #B8C7D9; font-size: 1.2rem; text-align: center; margin-bottom: 80px;">One team. Four stages. Full-stack funding support.</p>
+        <p style="color: var(--text-muted); font-size: 1.2rem; text-align: center; margin-bottom: 80px;">One team. Four stages. Full-stack funding support.</p>
 
         <!-- Stage 1 -->
         <div class="service-row">
@@ -53,7 +56,7 @@
             </div>
             <div class="service-visual">
                 <i class="fa-solid fa-mountain-sun"></i>
-                <h2 style="margin-top: 20px; color: var(--white);">The Base Camp</h2>
+                <h2>The Base Camp</h2>
             </div>
         </div>
 
@@ -68,7 +71,7 @@
             </div>
             <div class="service-visual">
                 <i class="fa-solid fa-rocket"></i>
-                <h2 style="margin-top: 20px; color: var(--white);">The Ascent</h2>
+                <h2>The Ascent</h2>
             </div>
         </div>
 
@@ -84,7 +87,7 @@
             </div>
             <div class="service-visual">
                 <i class="fa-solid fa-chart-line"></i>
-                <h2 style="margin-top: 20px; color: var(--white);">The Summit Push</h2>
+                <h2>The Summit Push</h2>
             </div>
         </div>
 
@@ -100,7 +103,7 @@
             </div>
             <div class="service-visual">
                 <i class="fa-solid fa-crown"></i>
-                <h2 style="margin-top: 20px; color: var(--white);">The Peak</h2>
+                <h2>The Peak</h2>
             </div>
         </div>
     </section>
