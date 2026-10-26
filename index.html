@@ -7,6 +7,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Custom Hero Layout for the Floating Card */
+        .hero { padding: 80px 5% 100px; text-align: left; display: flex; align-items: center; justify-content: space-between; gap: 50px; max-width: 1200px; margin: 0 auto; }
+        .hero-content { flex: 1; }
+        .hero-content h1 { font-size: 4.5rem; margin-bottom: 20px; line-height: 1.1; }
+        .hero-content p { font-size: 1.2rem; margin-bottom: 40px; color: var(--text-muted); }
+        .hero-btns { display: flex; gap: 20px; }
+        
+        /* The LaunchBoom Style Floating Card */
+        .hero-card { flex: 0 0 400px; background: var(--white); border-radius: 12px; padding: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border: 1px solid #E2E8F0; transform: rotate(2deg); transition: transform 0.3s; }
+        .hero-card:hover { transform: rotate(0deg) scale(1.02); }
+        .hero-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
+        .hero-card h3 { font-size: 1.2rem; margin-bottom: 5px; color: var(--navy); }
+        .hero-card .amount { font-size: 1.8rem; color: var(--gold); font-family: 'Montserrat', sans-serif; font-weight: bold; }
+        .hero-card .platform { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+
+        @media (max-width: 900px) {
+            .hero { flex-direction: column; text-align: center; }
+            .hero-content h1 { font-size: 3rem; }
+            .hero-btns { justify-content: center; }
+            .hero-card { display: none; /* Hide on mobile to keep it clean */ }
+        }
+    </style>
 </head>
 <body>
 
@@ -21,16 +44,27 @@
         </div>
     </nav>
 
+    <!-- NEW HERO SECTION WITH FLOATING CARD -->
     <header class="hero">
-        <h1>Every Great Vision <br>Deserves Funding.</h1>
-        <p>We help filmmakers, creators, and founders secure the capital to bring bold ideas to life — through crowdfunding, grants, and full-stack growth strategy.</p>
-        <div class="hero-btns">
-            <a href="contact.html" class="btn">Book a Free Call</a>
-            <a href="success-stories.html" class="btn-outline">See Success Stories</a>
+        <div class="hero-content">
+            <h1>Every Great Vision <br>Deserves Funding.</h1>
+            <p>We help filmmakers, creators, and founders secure the capital to bring bold ideas to life — through crowdfunding, grants, and full-stack growth strategy.</p>
+            <div class="hero-btns">
+                <a href="contact.html" class="btn">Book a Free Call</a>
+                <a href="success-stories.html" class="btn-outline">See Success Stories</a>
+            </div>
+        </div>
+        
+        <!-- The Proof Card -->
+        <div class="hero-card">
+            <img src="images/misen.jpg" alt="Misen Dutch Oven">
+            <p class="platform">Indiegogo Campaign</p>
+            <h3>Misen Dutch Oven</h3>
+            <p class="amount">$4,964,374 Raised</p>
         </div>
     </header>
 
-    <!-- NEW SECTION: Who We Serve -->
+    <!-- Who We Serve -->
     <section class="who-we-serve">
         <h2>Who We Serve</h2>
         <div class="icons-grid">
@@ -41,42 +75,37 @@
         </div>
     </section>
 
+    <!-- The Funding Peak -->
     <section class="funding-peak">
         <h2>The Funding Peak</h2>
-        <p style="margin-bottom: 40px; color: #B8C7D9; font-size: 1.1rem;">Over 55,000 Backers Supported Across 6 Massive Campaigns</p>
+        <p style="margin-bottom: 40px; color: var(--text-muted); font-size: 1.1rem;">Over 55,000 Backers Supported Across 6 Massive Campaigns</p>
         
         <div class="peaks-grid">
-            <!-- Misen -->
             <a href="https://www.indiegogo.com/en/projects/misen-17580952/the-misen-dutch-oven" target="_blank" class="peak-card">
                 <img src="images/misen.jpg" alt="Misen">
                 <h3>Misen Dutch Oven</h3>
                 <p>42,996 Backers</p>
             </a>
-            <!-- Timemore -->
             <a href="https://www.indiegogo.com/en/projects/timemoresculptor/timemore-electric-coffee-grinder" target="_blank" class="peak-card">
                 <img src="images/timemore.jpg" alt="Timemore">
                 <h3>Timemore Grinder</h3>
                 <p>11,035 Backers</p>
             </a>
-            <!-- DC -->
             <a href="https://www.kickstarter.com/projects/cze/dc-dbg-glc" target="_blank" class="peak-card">
                 <img src="images/dc.jpg" alt="DC">
                 <h3>DC Green Lantern</h3>
                 <p>4,994 Backers</p>
             </a>
-            <!-- URXR -->
             <a href="https://www.kickstarter.com/projects/urxrone-glasses/urxr-one-lightweight-spatial-display-glasses" target="_blank" class="peak-card">
                 <img src="images/urxr.jpg" alt="URXR">
                 <h3>URXR One</h3>
                 <p>1,672 Backers</p>
             </a>
-            <!-- Zendure -->
             <a href="https://www.indiegogo.com/en/projects/zendure/superbase-v-plug-play-home-energy-storage-system" target="_blank" class="peak-card">
                 <img src="images/zendure.jpg" alt="Zendure">
                 <h3>Zendure SuperBase V</h3>
                 <p>1,193 Backers</p>
             </a>
-            <!-- X1 Lite -->
             <a href="https://www.kickstarter.com/projects/xlaserlab/x1-lite-worlds-first-pen-and-torch-laser-workstation" target="_blank" class="peak-card">
                 <img src="images/x1.jpg" alt="X1 Lite">
                 <h3>X1 Lite Laser</h3>
@@ -85,7 +114,7 @@
         </div>
     </section>
 
-    <!-- NEW SECTION: The Journey -->
+    <!-- The Journey -->
     <section class="journey">
         <h2>The Journey</h2>
         <div class="journey-steps">
