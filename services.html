@@ -8,13 +8,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
-        .service-card { background: var(--navy-light); padding: 30px; border-radius: 8px; border-top: 4px solid var(--gold); }
-        .service-card h3 { color: var(--gold); margin-bottom: 10px; }
-        .service-card ul { list-style: none; margin-top: 15px; color: #B8C7D9; }
-        .service-card li { margin-bottom: 10px; padding-left: 20px; position: relative; }
-        .service-card li::before { content: "→"; position: absolute; left: 0; color: var(--sky-blue); }
-        @media (max-width: 768px) { .service-grid { grid-template-columns: 1fr; } }
+        .service-row { display: flex; gap: 40px; margin-bottom: 80px; align-items: center; }
+        .service-row:nth-child(even) { flex-direction: row-reverse; }
+        .service-text { flex: 1; }
+        .service-text h3 { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; display: flex; align-items: center; gap: 15px; }
+        .service-text h3 span { font-size: 4rem; color: rgba(74, 158, 255, 0.2); -webkit-text-stroke: 2px var(--sky-blue); }
+        .service-text ul { list-style: none; }
+        .service-text li { margin-bottom: 15px; font-size: 1.1rem; color: #B8C7D9; padding-left: 25px; position: relative; }
+        .service-text li::before { content: "→"; position: absolute; left: 0; color: var(--gold); font-weight: bold; }
+        .service-visual { flex: 1; background: var(--navy); border-radius: 12px; padding: 40px; text-align: center; border: 1px solid #2a4566; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .service-visual i { font-size: 5rem; color: var(--sky-blue); }
+        
+        @media (max-width: 768px) { 
+            .service-row, .service-row:nth-child(even) { flex-direction: column; gap: 20px; } 
+            .service-text h3 { font-size: 2rem; } 
+            .service-visual { display: none; } 
+        }
     </style>
 </head>
 <body>
@@ -28,42 +37,74 @@
             <a href="contact.html" class="btn">Book a Call</a>
         </div>
     </nav>
+    
     <section class="container">
-        <h1 style="font-size: 3rem; margin-bottom: 20px;">Everything You Need to Launch, Fund & Scale</h1>
-        <p style="color: #B8C7D9; font-size: 1.2rem;">One team. Four stages. Full-stack funding support.</p>
-        <div class="service-grid">
-            <div class="service-card">
-                <h3>🏔️ STAGE 1: SECURE</h3>
+        <h1 style="font-size: 4rem; margin-bottom: 20px; text-align: center;">The 4 Stages of Success</h1>
+        <p style="color: #B8C7D9; font-size: 1.2rem; text-align: center; margin-bottom: 80px;">One team. Four stages. Full-stack funding support.</p>
+
+        <!-- Stage 1 -->
+        <div class="service-row">
+            <div class="service-text">
+                <h3><span>01</span> SECURE</h3>
                 <ul>
-                    <li><strong>Crowdfunding:</strong> Strategy, pre-launch, live campaign management.</li>
-                    <li><strong>Grant Writing:</strong> Research, writing, and submission support.</li>
+                    <li><strong>Crowdfunding:</strong> Strategy, pre-launch, and live campaign management.</li>
+                    <li><strong>Grant Writing:</strong> In-depth research, writing, and submission support.</li>
                 </ul>
             </div>
-            <div class="service-card">
-                <h3>🚀 STAGE 2: LAUNCH</h3>
+            <div class="service-visual">
+                <i class="fa-solid fa-mountain-sun"></i>
+                <h2 style="margin-top: 20px; color: var(--white);">The Base Camp</h2>
+            </div>
+        </div>
+
+        <!-- Stage 2 -->
+        <div class="service-row">
+            <div class="service-text">
+                <h3><span>02</span> LAUNCH</h3>
                 <ul>
-                    <li><strong>Pitch Deck Design:</strong> Investor-grade decks that close.</li>
-                    <li><strong>Press Release:</strong> Media-ready announcements that get picked up.</li>
+                    <li><strong>Pitch Deck Design:</strong> Investor-grade decks that help you close.</li>
+                    <li><strong>Press Release:</strong> Media-ready announcements that actually get picked up.</li>
                 </ul>
             </div>
-            <div class="service-card">
-                <h3>📈 STAGE 3: GROW</h3>
+            <div class="service-visual">
+                <i class="fa-solid fa-rocket"></i>
+                <h2 style="margin-top: 20px; color: var(--white);">The Ascent</h2>
+            </div>
+        </div>
+
+        <!-- Stage 3 -->
+        <div class="service-row">
+            <div class="service-text">
+                <h3><span>03</span> GROW</h3>
                 <ul>
-                    <li><strong>SEO Optimisation:</strong> Get found organically.</li>
-                    <li><strong>Social Media Marketing:</strong> Build audience, drive momentum.</li>
+                    <li><strong>SEO Optimisation:</strong> Get found organically by the right audience.</li>
+                    <li><strong>Social Media Marketing:</strong> Build your community and drive momentum.</li>
                     <li><strong>Ads Management:</strong> Meta, Google, and Kickstarter ads that convert.</li>
                 </ul>
             </div>
-            <div class="service-card">
-                <h3>🏆 STAGE 4: SUSTAIN</h3>
+            <div class="service-visual">
+                <i class="fa-solid fa-chart-line"></i>
+                <h2 style="margin-top: 20px; color: var(--white);">The Summit Push</h2>
+            </div>
+        </div>
+
+        <!-- Stage 4 -->
+        <div class="service-row">
+            <div class="service-text">
+                <h3><span>04</span> SUSTAIN</h3>
                 <ul>
-                    <li><strong>Investor Relations:</strong> Keep backers engaged.</li>
-                    <li><strong>Community Management:</strong> Nurture your base.</li>
+                    <li><strong>Investor Relations:</strong> Keep your backers engaged long after launch.</li>
+                    <li><strong>Community Management:</strong> Nurture your audience into loyal fans.</li>
                     <li><strong>Advisory:</strong> Brand strategy & quarterly growth audits.</li>
                 </ul>
             </div>
+            <div class="service-visual">
+                <i class="fa-solid fa-crown"></i>
+                <h2 style="margin-top: 20px; color: var(--white);">The Peak</h2>
+            </div>
         </div>
     </section>
+
     <footer>
         <p>&copy; 2026 PEAKFUND ADVISORS. All rights reserved.</p>
         <div class="social-row">
