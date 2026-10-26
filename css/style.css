@@ -1,19 +1,19 @@
 /* PEAKFUND ADVISORS - MASTER STYLESHEET */
 :root {
-  --navy: #0A2540;
-  --navy-light: #1E3A5F;
-  --sky-blue: #4A9EFF;
-  --gold: #F5A623;
+  --navy: #0A2540;         /* Header / Footer */
+  --slate-blue: #152D4A;   /* Main Body Background */
+  --sky-blue: #4A9EFF;     /* Accents */
+  --gold: #F5A623;         /* Buttons / Highlights */
   --white: #FFFFFF;
   --charcoal: #0D0D0D;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background-color: var(--navy); color: var(--white); line-height: 1.6; }
+body { font-family: 'Inter', sans-serif; background-color: var(--slate-blue); color: var(--white); line-height: 1.6; }
 h1, h2, h3, .brand { font-family: 'Anton', sans-serif; letter-spacing: 1px; text-transform: uppercase; }
 
-/* Navigation */
-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: rgba(10, 37, 64, 0.95); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--navy-light); }
+/* Navigation (Strict Navy to separate from body) */
+nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: var(--navy); position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--sky-blue); box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
 .logo { font-size: 24px; color: var(--white); text-decoration: none; font-family: 'Anton', sans-serif; }
 .logo span { color: var(--gold); }
 .nav-links { display: flex; gap: 30px; align-items: center; }
@@ -23,25 +23,38 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
 .btn:hover { transform: scale(1.05); }
 
 /* Hero Section */
-.hero { padding: 100px 5%; text-align: center; background: var(--navy); }
+.hero { padding: 100px 5%; text-align: center; background: var(--slate-blue); }
 .hero h1 { font-size: 4rem; margin-bottom: 20px; line-height: 1.1; }
 .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px; color: #B8C7D9; }
 .hero-btns { display: flex; gap: 20px; justify-content: center; }
 .btn-outline { border: 2px solid var(--sky-blue); color: var(--sky-blue); padding: 10px 20px; border-radius: 4px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
 .btn-outline:hover { background: var(--sky-blue); color: var(--navy); }
 
-/* The Funding Peak - Clean Grid */
-.funding-peak { padding: 80px 5%; text-align: center; background: var(--navy-light); }
+/* Who We Serve */
+.who-we-serve { padding: 60px 5%; text-align: center; background: var(--navy); }
+.icons-grid { display: flex; justify-content: center; gap: 40px; margin-top: 30px; flex-wrap: wrap; }
+.icons-grid div { background: var(--slate-blue); padding: 20px 40px; border-radius: 8px; border: 1px solid #2a4566; }
+.icons-grid i { font-size: 2rem; color: var(--gold); margin-bottom: 10px; }
+
+/* The Funding Peak - Grid */
+.funding-peak { padding: 80px 5%; text-align: center; background: var(--slate-blue); }
 .funding-peak h2 { font-size: 2.5rem; margin-bottom: 40px; color: var(--gold); }
 .peaks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-.peak-card { background: var(--navy); padding: 20px; border-radius: 8px; text-decoration: none; color: var(--white); transition: transform 0.3s, box-shadow 0.3s; border: 1px solid var(--navy-light); }
-.peak-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); border-color: var(--gold); }
+.peak-card { background: var(--navy); padding: 20px; border-radius: 8px; text-decoration: none; color: var(--white); transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #2a4566; display: block; }
+.peak-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.4); border-color: var(--sky-blue); }
 .peak-card img { width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
 .peak-card h3 { font-size: 1.2rem; margin-bottom: 5px; }
 .peak-card p { color: var(--sky-blue); font-family: 'Montserrat', sans-serif; font-weight: bold; font-size: 0.9rem; }
 
+/* The Journey */
+.journey { padding: 60px 5%; text-align: center; background: var(--navy); }
+.journey h2 { font-size: 2.5rem; color: var(--gold); margin-bottom: 40px; }
+.journey-steps { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.step { background: var(--slate-blue); padding: 20px; border-radius: 8px; width: 200px; border-top: 3px solid var(--sky-blue); }
+.step h3 { font-size: 1.2rem; margin-bottom: 5px; color: var(--white); }
+
 /* Footer */
-footer { background: var(--charcoal); padding: 40px 5%; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #333; }
+footer { background: var(--navy); padding: 40px 5%; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #1f3b5d; }
 footer p { color: #888; font-size: 14px; }
 .social-row a { color: var(--sky-blue); font-size: 24px; margin-left: 15px; transition: color 0.2s, transform 0.2s; display: inline-block; }
 .social-row a:hover { color: var(--gold); transform: scale(1.1); }
