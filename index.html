@@ -59,6 +59,25 @@
         .btn-see-all { display: inline-block; margin-top: 50px; background: var(--navy); color: var(--white); padding: 15px 30px; border-radius: 4px; text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 800; transition: background 0.3s; }
         .btn-see-all:hover { background: var(--gold); color: var(--navy); }
 
+        /* NEW TEXT LOGO STYLING */
+        .text-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--navy);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            letter-spacing: -1px;
+        }
+        .text-logo .gold-dot {
+            color: var(--gold);
+            font-size: 30px;
+            line-height: 0;
+            margin-left: 2px;
+        }
+
         @media (max-width: 900px) {
             .hero { flex-direction: column; text-align: center; }
             .hero-content h1 { font-size: 3rem; }
@@ -73,8 +92,11 @@
 <body>
 
     <nav>
-        <!-- THIS IS YOUR LOGO IMAGE -->
-        <a href="index.html" class="logo"><img src="images/logo.png" alt="PeakFund Advisors"></a>
+        <!-- THE NEW TEXT LOGO -->
+        <a href="index.html" class="text-logo">
+            PEAK<span>FUND</span><span class="gold-dot">.</span>
+        </a>
+        
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
