@@ -59,10 +59,22 @@
         .btn-see-all { display: inline-block; margin-top: 50px; background: var(--navy); color: var(--white); padding: 15px 30px; border-radius: 4px; text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 800; transition: background 0.3s; }
         .btn-see-all:hover { background: var(--gold); color: var(--navy); }
 
-        /* Image Logo Styling */
-        .logo { background: var(--white); padding: 8px 16px; border-radius: 6px; display: inline-flex; align-items: center; transition: transform 0.2s; }
+        /* THE UPDATED LOGO STYLING */
+        .logo { 
+            background: var(--white); 
+            padding: 10px 20px; /* More padding around the logo */
+            border-radius: 8px; 
+            display: inline-flex; 
+            align-items: center; 
+            transition: transform 0.2s; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
         .logo:hover { transform: scale(1.02); }
-        .logo img { height: 35px; width: auto; display: block; }
+        .logo img { 
+            height: 55px; /* Made the logo much larger and bolder */
+            width: auto; 
+            display: block; 
+        }
 
         @media (max-width: 900px) {
             .hero { flex-direction: column; text-align: center; }
