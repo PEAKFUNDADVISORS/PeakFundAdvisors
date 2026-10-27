@@ -8,14 +8,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .case-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
+        .section-title { font-size: 2.5rem; margin: 60px 0 20px; color: var(--navy); text-align: center; }
+        .section-subtitle { text-align: center; color: var(--text-muted); margin-bottom: 40px; font-size: 1.1rem; }
+        
+        .case-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
         .case-study { background: var(--white); padding: 25px; border-radius: 8px; border-left: 4px solid var(--gold); display: flex; flex-direction: column; text-decoration: none; color: var(--navy); transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #E2E8F0; border-left-width: 4px;}
         .case-study:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); border-left-color: var(--sky-blue); }
-        .case-study h3 { font-size: 1.5rem; margin-bottom: 5px; color: var(--navy); font-family: 'Montserrat', sans-serif; font-weight: 800; }
+        .case-study h3 { font-size: 1.4rem; margin-bottom: 5px; color: var(--navy); font-family: 'Montserrat', sans-serif; font-weight: 800; }
         .case-stats { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 15px; margin-top: 10px; }
-        .case-stats p { font-size: 1.1rem; color: var(--sky-blue); font-family: 'Montserrat', sans-serif; font-weight: 800; }
-        .case-stats span { color: var(--text-muted); font-size: 0.85rem; display: block; font-family: 'Inter', sans-serif; font-weight: 400;}
-        .case-img { width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 15px; border: 1px solid #E2E8F0;}
+        .case-stats p { font-size: 1rem; color: var(--sky-blue); font-family: 'Montserrat', sans-serif; font-weight: 800; }
+        .case-stats span { color: var(--text-muted); font-size: 0.8rem; display: block; font-family: 'Inter', sans-serif; font-weight: 400;}
+        .case-img { width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 15px; border: 1px solid #E2E8F0; background: #f0f0f0;}
+        
+        .platform-tag { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 5px; }
+        .tag-indiegogo { color: var(--gold); }
+        .tag-kickstarter { color: var(--sky-blue); }
+        .tag-seed { color: #4CAF50; } /* Green for Seed&Spark */
+        .tag-gofundme { color: #00B964; } /* GoFundMe green */
+        .tag-grant { color: #8E44AD; } /* Purple for Grants */
+
         @media (max-width: 768px) { .case-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -30,14 +41,19 @@
             <a href="contact.html" class="btn">Book a Call</a>
         </div>
     </nav>
+    
     <section class="container">
-        <h1 style="font-size: 3rem; margin-bottom: 20px;">Real Creators. Real Results.</h1>
-        <p style="margin-bottom: 40px; color: var(--text-muted); font-size: 1.2rem;">Click any campaign to view the live project. Over 55,000 backers secured.</p>
+        <h1 style="font-size: 3rem; margin-bottom: 20px; text-align: center;">Real Creators. Real Results.</h1>
+        <p style="text-align: center; margin-bottom: 40px; color: var(--text-muted); font-size: 1.2rem;">Click any campaign to view the live project.</p>
+
+        <!-- SECTION 1: MAJOR CROWDFUNDING -->
+        <h2 class="section-title">Kickstarter & Indiegogo</h2>
+        <p class="section-subtitle">Over 55,000 backers supported across massive product launches.</p>
         <div class="case-grid">
             <a href="https://www.indiegogo.com/en/projects/misen-17580952/the-misen-dutch-oven" target="_blank" class="case-study">
                 <img src="images/misen.jpg" class="case-img" style="object-position: top;">
+                <p class="platform-tag tag-indiegogo">INDIEGOGO</p>
                 <h3>Misen Dutch Oven</h3>
-                <p style="color: var(--gold); font-family: 'Montserrat'; font-weight: 800; font-size: 0.85rem;">INDIEGOGO</p>
                 <div class="case-stats">
                     <p>$4,964,374 <span>Raised</span></p>
                     <p>42,996 <span>Backers</span></p>
@@ -46,8 +62,8 @@
             </a>
             <a href="https://www.indiegogo.com/en/projects/timemoresculptor/timemore-electric-coffee-grinder" target="_blank" class="case-study">
                 <img src="images/timemore.jpg" class="case-img" style="object-position: top;">
+                <p class="platform-tag tag-indiegogo">INDIEGOGO</p>
                 <h3>Timemore Grinder</h3>
-                <p style="color: var(--gold); font-family: 'Montserrat'; font-weight: 800; font-size: 0.85rem;">INDIEGOGO</p>
                 <div class="case-stats">
                     <p>S$6,855,991 <span>Raised</span></p>
                     <p>11,035 <span>Backers</span></p>
@@ -56,8 +72,8 @@
             </a>
             <a href="https://www.kickstarter.com/projects/cze/dc-dbg-glc" target="_blank" class="case-study">
                 <img src="images/dc.jpg" class="case-img" style="object-position: top;">
+                <p class="platform-tag tag-kickstarter">KICKSTARTER</p>
                 <h3>DC Green Lantern</h3>
-                <p style="color: var(--sky-blue); font-family: 'Montserrat'; font-weight: 800; font-size: 0.85rem;">KICKSTARTER</p>
                 <div class="case-stats">
                     <p>$1,337,480 <span>Raised</span></p>
                     <p>4,994 <span>Backers</span></p>
@@ -66,8 +82,8 @@
             </a>
             <a href="https://www.kickstarter.com/projects/urxrone-glasses/urxr-one-lightweight-spatial-display-glasses" target="_blank" class="case-study">
                 <img src="images/urxr.jpg" class="case-img" style="object-position: center;">
+                <p class="platform-tag tag-kickstarter">KICKSTARTER</p>
                 <h3>URXR Spatial Glasses</h3>
-                <p style="color: var(--sky-blue); font-family: 'Montserrat'; font-weight: 800; font-size: 0.85rem;">KICKSTARTER</p>
                 <div class="case-stats">
                     <p>$1,378,069 <span>Raised</span></p>
                     <p>1,672 <span>Backers</span></p>
@@ -76,8 +92,8 @@
             </a>
             <a href="https://www.indiegogo.com/en/projects/zendure/superbase-v-plug-play-home-energy-storage-system" target="_blank" class="case-study">
                 <img src="images/zendure.jpg" class="case-img" style="object-position: top;">
+                <p class="platform-tag tag-indiegogo">INDIEGOGO</p>
                 <h3>Zendure SuperBase V</h3>
-                <p style="color: var(--gold); font-family: 'Montserrat'; font-weight: 800; font-size: 0.85rem;">INDIEGOGO</p>
                 <div class="case-stats">
                     <p>$5,438,805 <span>Raised</span></p>
                     <p>1,193 <span>Backers</span></p>
@@ -86,8 +102,8 @@
             </a>
             <a href="https://www.kickstarter.com/projects/xlaserlab/x1-lite-worlds-first-pen-and-torch-laser-workstation" target="_blank" class="case-study">
                 <img src="images/x1.jpg" class="case-img" style="object-position: center;">
+                <p class="platform-tag tag-kickstarter">KICKSTARTER</p>
                 <h3>X1 Lite Laser</h3>
-                <p style="color: var(--sky-blue); font-family: 'Montserrat'; font-weight: 800; font-size: 0.85rem;">KICKSTARTER</p>
                 <div class="case-stats">
                     <p>HK$ 10.2M <span>Raised</span></p>
                     <p>441 <span>Backers</span></p>
@@ -95,7 +111,89 @@
                 <p style="color: var(--text-muted); font-size: 0.95rem;">Aggressive live-campaign ad management drove high-ticket pledges, resulting in over HK$ 10M raised.</p>
             </a>
         </div>
+
+        <!-- SECTION 2: SEED & SPARK -->
+        <h2 class="section-title">Seed&Spark Campaigns</h2>
+        <p class="section-subtitle">Supporting independent filmmakers and storytellers.</p>
+        <div class="case-grid">
+            <a href="https://seedandspark.com/fund/short-film-168-hours" target="_blank" class="case-study">
+                <img src="images/seed-168.jpg" class="case-img" style="object-position: center;">
+                <p class="platform-tag tag-seed">SEED&SPARK</p>
+                <h3>A Short Film in 168 Hours</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 10px;">A collaborative film project born from the 168 Film Project, combining top Texas teams to compete for a grand prize.</p>
+            </a>
+            <a href="https://seedandspark.com/fund/rez" target="_blank" class="case-study">
+                <img src="images/seed-rez.jpg" class="case-img" style="object-position: center;">
+                <p class="platform-tag tag-seed">SEED&SPARK</p>
+                <h3>Rez</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 10px;">A record-breaking campaign funded in just 72 hours. This Spike Lee grantee tells the story of an Ojibwe teen on the Leech Lake reservation.</p>
+            </a>
+            <a href="https://seedandspark.com/fund/precious-time" target="_blank" class="case-study">
+                <img src="images/seed-precious.jpg" class="case-img" style="object-position: center;">
+                <p class="platform-tag tag-seed">SEED&SPARK</p>
+                <h3>Precious Time</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 10px;">An independent film campaign utilizing Seed&Spark's unique WishList and crowdfunding model for filmmakers.</p>
+            </a>
+        </div>
+
+        <!-- SECTION 3: GOFUNDME -->
+        <h2 class="section-title">GoFundMe Campaigns</h2>
+        <p class="section-subtitle">Helping creators and communities rally support for their causes.</p>
+        <div class="case-grid">
+            <a href="https://www.gofundme.com/f/for-our-little-lila" target="_blank" class="case-study">
+                <img src="images/gofundme-lila.jpg" class="case-img" style="object-position: center;">
+                <p class="platform-tag tag-gofundme">GOFUNDME</p>
+                <h3>For Our Little Lila</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 10px;">A heartfelt campaign to support a young girl's medical journey.</p>
+            </a>
+            <a href="https://www.gofundme.com/f/arthurhelp-fund-our-short-student-film" target="_blank" class="case-study">
+                <img src="images/gofundme-arthur.jpg" class="case-img" style="object-position: center;">
+                <p class="platform-tag tag-gofundme">GOFUNDME</p>
+                <h3>Arthur's Student Film</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 10px;">Helping a student filmmaker secure the budget needed to bring a short film to life.</p>
+            </a>
+            <a href="https://www.gofundme.com/f/aquaterra-charity-football-tournament-for-macmillan" target="_blank" class="case-study">
+                <img src="images/gofundme-aquaterra.jpg" class="case-img" style="object-position: center;">
+                <p class="platform-tag tag-gofundme">GOFUNDME</p>
+                <h3>AquaTerra Charity Football</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 10px;">A community-driven charity tournament raising funds for Macmillan Cancer Support.</p>
+            </a>
+        </div>
+
+        <!-- SECTION 4: GRANT FUNDED FILMS (Examples) -->
+        <h2 class="section-title">Grant-Funded Films</h2>
+        <p class="section-subtitle">Examples of independent films brought to life through grant funding.</p>
+        <div class="case-grid">
+            <a href="https://houstonartsalliance.com/houston-filmmaking-team-filmatic-selected-for-nea-funded-soccer-documentary/" target="_blank" class="case-study">
+                <img src="images/film-cascarita.jpg" class="case-img" style="object-position: center;">
+                <p class="platform-tag tag-grant">NEA GRANT</p>
+                <h3>Cascarita</h3>
+                <div class="case-stats">
+                    <p>$30,000 <span>NEA Grant</span></p>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">A documentary exploring how soccer shapes community life in Houston, supported by the National Endowment for the Arts.</p>
+            </a>
+            <a href="https://www.screen.scot/news/2026/september/matrescence-receives-2026-documentary-fund-grant-from-sundance-institute" target="_blank" class="case-study">
+                <img src="images/film-matrescence.jpg" class="case-img" style="object-position: center;">
+                <p class="platform-tag tag-grant">SUNDANCE FUND</p>
+                <h3>Matrescence</h3>
+                <div class="case-stats">
+                    <p>Sundance <span>Doc Fund Grant</span></p>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">A feature documentary exploring the physical and psychological changes of motherhood, backed by Sundance Institute.</p>
+            </a>
+            <a href="https://festival.sundance.org/highlights/your-guide-to-the-2026-festival-projects-supported-by-sundance-institute-programs/" target="_blank" class="case-study">
+                <img src="images/film-ancestors.jpg" class="case-img" style="object-position: center;">
+                <p class="platform-tag tag-grant">SUNDANCE FUND</p>
+                <h3>Ancestors</h3>
+                <div class="case-stats">
+                    <p>Sundance <span>Doc Fund Grant</span></p>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">A documentary following tribal repatriation specialists fighting to return Indigenous remains, supported by Sundance Institute.</p>
+            </a>
+        </div>
     </section>
+
     <footer>
         <p>&copy; 2026 PEAKFUND ADVISORS. All rights reserved.</p>
         <div class="social-row">
