@@ -4,26 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEAKFUND ADVISORS | From Vision to Funding</title>
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Hero Layout */
         .hero { padding: 80px 5% 100px; text-align: left; display: flex; align-items: center; justify-content: space-between; gap: 50px; max-width: 1200px; margin: 0 auto; }
         .hero-content { flex: 1; }
         .hero-content h1 { font-size: 4.5rem; margin-bottom: 20px; line-height: 1.1; }
         .hero-content p { font-size: 1.2rem; margin-bottom: 40px; color: var(--text-muted); }
         .hero-btns { display: flex; gap: 20px; }
         
-        /* Floating Proof Card */
         .hero-card { flex: 0 0 400px; background: var(--white); border-radius: 12px; padding: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border: 1px solid #E2E8F0; transform: rotate(2deg); transition: opacity 0.5s ease-in-out; position: relative; }
         .hero-card:hover { transform: rotate(0deg) scale(1.02); }
         .hero-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
         .hero-card h3 { font-size: 1.2rem; margin-bottom: 5px; color: var(--navy); }
-        .hero-card .amount { font-size: 1.8rem; color: var(--gold); font-family: 'Montserrat', sans-serif; font-weight: bold; }
-        .hero-card .platform { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+        .hero-card .amount { font-size: 1.8rem; color: var(--gold); font-family: 'Montserrat', sans-serif; font-weight: 900; }
+        .hero-card .platform { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-family: 'Montserrat', sans-serif; font-weight: 700;}
 
-        /* 3 Pillar Section */
         .pillars-section { padding: 80px 5%; background: var(--white); text-align: center; }
         .pillars-section h2 { font-size: 2.5rem; margin-bottom: 60px; color: var(--navy); line-height: 1.2; }
         .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 0 auto; }
@@ -31,12 +28,11 @@
         .pillar-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
         .pillar-card img { width: 100%; height: 250px; object-fit: cover; }
         .pillar-content { padding: 30px; background: var(--white); border-top: 4px solid var(--gold); }
-        .pillar-content h3 { font-size: 1.4rem; margin-bottom: 15px; color: var(--navy); font-family: 'Anton', sans-serif; }
+        .pillar-content h3 { font-size: 1.4rem; margin-bottom: 15px; color: var(--navy); font-family: 'Montserrat', sans-serif; font-weight: 800;}
         .pillar-content p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
 
-        /* Platform Strip */
         .platform-strip { padding: 40px 5%; background: var(--navy); text-align: center; color: var(--white); display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-        .platform-strip p { font-size: 1.2rem; font-weight: 500; font-family: 'Montserrat', sans-serif; letter-spacing: 1px; opacity: 0.8; }
+        .platform-strip p { font-size: 1.2rem; font-weight: 700; font-family: 'Montserrat', sans-serif; letter-spacing: 2px; opacity: 0.8; }
 
         @media (max-width: 900px) {
             .hero { flex-direction: column; text-align: center; }
@@ -51,7 +47,7 @@
 <body>
 
     <nav>
-        <a href="index.html" class="logo">PEAK<span>FUND</span></a>
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="PeakFund Advisors"></a>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
@@ -61,7 +57,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
             <h1>Every Great Vision <br>Deserves Funding.</h1>
@@ -72,7 +67,6 @@
             </div>
         </div>
         
-        <!-- DYNAMIC FLOATING CARD -->
         <div class="hero-card" id="dynamic-card">
             <img id="card-img" src="images/misen.jpg" alt="Campaign Image">
             <p class="platform" id="card-platform">Indiegogo Campaign</p>
@@ -81,7 +75,6 @@
         </div>
     </header>
 
-    <!-- All Under One Roof -->
     <section class="pillars-section">
         <h2>Crowdfunding, grants, and marketing<br>— all under one roof.</h2>
         <div class="pillars-grid">
@@ -109,7 +102,6 @@
         </div>
     </section>
 
-    <!-- Platform Strip -->
     <div class="platform-strip">
         <p>KICKSTARTER</p>
         <p>INDIEGOGO</p>
@@ -117,7 +109,6 @@
         <p>SEED&SPARK</p>
     </div>
 
-    <!-- Who We Serve -->
     <section class="who-we-serve">
         <h2>Who We Serve</h2>
         <div class="icons-grid">
@@ -128,7 +119,6 @@
         </div>
     </section>
 
-    <!-- The Funding Peak -->
     <section class="funding-peak">
         <h2>The Funding Peak</h2>
         <p style="margin-bottom: 40px; color: var(--text-muted); font-size: 1.1rem;">Over 55,000 Backers Supported Across 6 Massive Campaigns</p>
@@ -167,7 +157,6 @@
         </div>
     </section>
 
-    <!-- The Journey -->
     <section class="journey">
         <h2>The Journey</h2>
         <div class="journey-steps">
@@ -185,7 +174,6 @@
         </div>
     </footer>
 
-    <!-- JAVASCRIPT FOR THE ROTATING CARD -->
     <script>
         const campaigns = [
             { img: "images/misen.jpg", platform: "Indiegogo Campaign", title: "Misen Dutch Oven", amount: "$4,964,374 Raised" },
@@ -193,33 +181,23 @@
             { img: "images/x1.jpg", platform: "Kickstarter Campaign", title: "X1 Lite Laser", amount: "HK$ 10.2M Raised" },
             { img: "images/zendure.jpg", platform: "Indiegogo Campaign", title: "Zendure SuperBase V", amount: "$5,438,805 Raised" }
         ];
-
         let currentIndex = 0;
         const cardImg = document.getElementById("card-img");
         const cardPlatform = document.getElementById("card-platform");
         const cardTitle = document.getElementById("card-title");
         const cardAmount = document.getElementById("card-amount");
-
         function changeCard() {
-            // Fade out
             document.getElementById("dynamic-card").style.opacity = 0;
-            
             setTimeout(() => {
-                // Change content
                 currentIndex = (currentIndex + 1) % campaigns.length;
                 cardImg.src = campaigns[currentIndex].img;
                 cardPlatform.textContent = campaigns[currentIndex].platform;
                 cardTitle.textContent = campaigns[currentIndex].title;
                 cardAmount.textContent = campaigns[currentIndex].amount;
-                
-                // Fade in
                 document.getElementById("dynamic-card").style.opacity = 1;
-            }, 500); // Wait 0.5s for fade out
+            }, 500);
         }
-
-        // Change card every 3.5 seconds
         setInterval(changeCard, 3500);
     </script>
-
 </body>
 </html>
