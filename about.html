@@ -12,36 +12,33 @@
         .about-hero h1 { font-size: 3.5rem; color: var(--navy); margin-bottom: 30px; font-family: 'Montserrat', sans-serif; font-weight: 900;}
         .about-hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 900px; margin: 0 auto 20px auto; line-height: 1.8; text-align: left; }
         
-        /* Team Section - Elegant Portrait Cards */
-        .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin: 80px 0; }
+        /* Team Section - Circular Frames */
+        .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin: 80px 0; }
+        .team-member { display: flex; align-items: center; gap: 35px; }
         
-        .team-member { 
-            background: var(--white); 
-            border-radius: 16px; 
-            overflow: hidden; 
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
-            border: 1px solid #E2E8F0;
-            transition: transform 0.3s;
-        }
-        .team-member:hover { transform: translateY(-5px); }
-        
+        /* Circular Image Container */
         .team-img-container {
-            width: 100%;
-            height: 400px; /* Tall enough to fit the whole upper body */
-            background-color: #f0f4f8;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
             overflow: hidden;
+            border: 5px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            flex-shrink: 0;
+            background-color: #f0f4f8; /* Gives a clean background if the image is transparent */
         }
         
+        /* Image Styling - Shifted down so heads fit */
         .team-img { 
             width: 100%; 
             height: 100%; 
             object-fit: cover; 
-            object-position: top; /* Keeps the face perfectly in frame */
+            object-position: center 25%; /* Shifts the image down inside the circle */
+            transform: scale(1.1); /* Slight zoom to fill the circle nicely */
         }
         
-        .team-info { padding: 30px; text-align: center; }
-        .team-info h3 { font-size: 1.6rem; color: var(--navy); margin-bottom: 5px; font-family: 'Montserrat', sans-serif; font-weight: 900; text-transform: uppercase;}
-        .team-info h4 { font-size: 0.9rem; color: var(--gold); margin-bottom: 20px; font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;}
+        .team-info h3 { font-size: 1.8rem; color: var(--navy); margin-bottom: 5px; font-family: 'Montserrat', sans-serif; font-weight: 900; text-transform: uppercase;}
+        .team-info h4 { font-size: 1rem; color: var(--gold); margin-bottom: 15px; font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;}
         .team-info p { color: var(--text-muted); font-size: 1rem; line-height: 1.6; }
 
         /* Mission Box */
@@ -54,6 +51,7 @@
 
         @media (max-width: 900px) { 
             .team-grid { grid-template-columns: 1fr; gap: 40px; }
+            .team-member { flex-direction: column; text-align: center; } 
             .mission-box ul { grid-template-columns: 1fr; }
             .about-hero p { text-align: center; }
         }
@@ -100,7 +98,7 @@
             <!-- Imran -->
             <div class="team-member">
                 <div class="team-img-container">
-                    <img src="images/imran.jpg" alt="Imran Abdulazeez" class="team-img">
+                    <img src="images/imran.jpg" alt="Imran Abdulazeez" class="team-img" style="object-position: center 40%;">
                 </div>
                 <div class="team-info">
                     <h3>Imran Abdulazeez</h3>
