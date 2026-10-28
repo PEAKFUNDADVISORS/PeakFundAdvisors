@@ -8,24 +8,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .service-row { display: flex; gap: 40px; margin-bottom: 80px; align-items: center; }
+        /* Jellop-Style Staggered Layout with Images */
+        .service-row { display: flex; gap: 60px; margin-bottom: 100px; align-items: center; }
         .service-row:nth-child(even) { flex-direction: row-reverse; }
+        
         .service-text { flex: 1; }
-        .service-text h3 { font-size: 2.5rem; color: var(--navy); margin-bottom: 20px; display: flex; align-items: center; gap: 15px; font-family: 'Montserrat', sans-serif; font-weight: 900;}
-        .service-text h3 span { font-size: 4rem; color: transparent; -webkit-text-stroke: 2px var(--sky-blue); opacity: 0.5;}
-        .service-text ul { list-style: none; }
-        .service-text li { margin-bottom: 15px; font-size: 1.1rem; color: var(--text-muted); padding-left: 25px; position: relative; }
-        .service-text li::before { content: "→"; position: absolute; left: 0; color: var(--gold); font-weight: bold; }
-        .service-text li strong { color: var(--navy); }
+        .service-text h2 { font-size: 2.5rem; color: var(--navy); margin-bottom: 20px; display: flex; align-items: center; gap: 15px; font-family: 'Montserrat', sans-serif; font-weight: 900;}
+        .service-text h2 span { font-size: 4rem; color: transparent; -webkit-text-stroke: 2px var(--sky-blue); opacity: 0.6;}
         
-        .service-visual { flex: 1; background: var(--off-white); border-radius: 12px; padding: 40px; text-align: center; border: 1px solid #E2E8F0; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .service-visual i { font-size: 5rem; color: var(--gold); }
-        .service-visual h2 { color: var(--navy); margin-top: 20px; }
+        .service-text p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.7; }
+        .service-text ul { list-style: none; margin-top: 20px; }
+        .service-text li { margin-bottom: 15px; font-size: 1.05rem; color: var(--navy); padding-left: 30px; position: relative; font-weight: 500; }
+        .service-text li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: bold; font-size: 1.2rem; }
         
-        @media (max-width: 768px) { 
-            .service-row, .service-row:nth-child(even) { flex-direction: column; gap: 20px; } 
-            .service-text h3 { font-size: 2rem; } 
-            .service-visual { display: none; } 
+        .service-visual { 
+            flex: 1; 
+            background: var(--white); 
+            border-radius: 16px; 
+            padding: 20px; 
+            text-align: center; 
+            border: 1px solid #E2E8F0; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06); 
+            transition: transform 0.3s;
+        }
+        .service-visual:hover { transform: translateY(-5px); }
+        .service-visual img { 
+            width: 100%; 
+            height: 250px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+            margin-bottom: 20px;
+        }
+        .service-visual h3 { color: var(--navy); font-size: 1.5rem; margin-bottom: 10px; font-family: 'Montserrat', sans-serif; font-weight: 800;}
+        
+        @media (max-width: 900px) { 
+            .service-row, .service-row:nth-child(even) { flex-direction: column; gap: 30px; margin-bottom: 60px; } 
+            .service-text h2 { font-size: 2rem; } 
+            .service-visual { width: 100%; padding: 15px; }
+            .service-visual img { height: 200px; }
         }
     </style>
 </head>
@@ -42,5 +62,82 @@
     </nav>
     
     <section class="container">
-        <h1 style="font-size: 4rem; margin-bottom: 20px; text-align: center;">The 4 Stages of Success</h1>
-        <p style="color: var(--text-muted); font-size: 1.2rem; text-align: center; margin-bottom: 80
+        <h1 style="font-size: 3.5rem; margin-bottom: 20px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 900; color: var(--navy);">The 4 Stages of Success</h1>
+        <p style="color: var(--text-muted); font-size: 1.2rem; text-align: center; margin-bottom: 80px; max-width: 700px; margin-left: auto; margin-right: auto;">We don't just advise you—we build the strategy, create the assets, and run the campaigns to get you funded.</p>
+
+        <!-- STAGE 1: SECURE -->
+        <div class="service-row">
+            <div class="service-text">
+                <h2><span>01</span> SECURE</h2>
+                <p><strong>The Foundation of Your Campaign.</strong> We handle the heavy lifting of finding the money. Whether it's crowdfunding or grants, we position your project as a prime candidate for funding.</p>
+                <ul>
+                    <li><strong>Crowdfunding Strategy:</strong> We build your pre-launch funnel, set up your campaign page, and manage your live campaign on Kickstarter, Indiegogo, Seed&Spark, and GoFundMe.</li>
+                    <li><strong>Grant Writing:</strong> We research and identify the perfect grants for your project (NEA, Sundance, etc.) and write compelling, winning proposals.</li>
+                </ul>
+            </div>
+            <div class="service-visual">
+                <img src="images/service-fund.jpg" alt="Funding and Grants Strategy">
+                <h3>Base Camp</h3>
+            </div>
+        </div>
+
+        <!-- STAGE 2: LAUNCH -->
+        <div class="service-row">
+            <div class="service-text">
+                <h2><span>02</span> LAUNCH</h2>
+                <p><strong>Make Some Noise.</strong> You have the funding strategy; now we make sure the world knows about it. We create the visual and media assets that turn viewers into backers.</p>
+                <ul>
+                    <li><strong>Pitch Deck Design:</strong> We design investor-grade pitch decks that clearly communicate your vision and secure meetings.</li>
+                    <li><strong>Press Release & PR:</strong> We write and distribute media-ready announcements to get your project featured in relevant publications.</li>
+                    <li><strong>Campaign Video Strategy:</strong> We script and direct the core video assets that drive your campaign's conversion.</li>
+                </ul>
+            </div>
+            <div class="service-visual">
+                <img src="images/service-launch.jpg" alt="Launch and Design Strategy">
+                <h3>The Ascent</h3>
+            </div>
+        </div>
+
+        <!-- STAGE 3: GROW -->
+        <div class="service-row">
+            <div class="service-text">
+                <h2><span>03</span> GROW</h2>
+                <p><strong>Scale Your Momentum.</strong> Launch day is just the beginning. We use paid ads and organic reach to build a massive wave of backers and keep the momentum going.</p>
+                <ul>
+                    <li><strong>Ads Management:</strong> We run highly targeted Meta (Facebook/Instagram) and Google ads to drive high-quality traffic to your campaign.</li>
+                    <li><strong>Social Media Marketing:</strong> We build your community, manage your social channels, and create engaging content to keep backers excited.</li>
+                    <li><strong>SEO Optimisation:</strong> We make sure your project gets found organically by people searching for what you're creating.</li>
+                </ul>
+            </div>
+            <div class="service-visual">
+                <img src="images/service-grow.jpg" alt="Grow and Scale Strategy">
+                <h3>Summit Push</h3>
+            </div>
+        </div>
+
+        <!-- STAGE 4: SUSTAIN -->
+        <div class="service-row">
+            <div class="service-text">
+                <h2><span>04</span> SUSTAIN</h2>
+                <p><strong>Keep the Momentum Alive.</strong> Once the campaign ends, the real work begins. We help you convert your backers into long-term fans and customers.</p>
+                <ul>
+                    <li><strong>Investor Relations:</strong> We help you manage post-campaign communication with your backers and investors.</li>
+                    <li><strong>Community Management:</strong> We nurture your audience so they are ready to support your next launch.</li>
+                    <li><strong>Advisory:</strong> We provide long-term brand strategy and quarterly growth audits to ensure your business keeps growing.</li>
+                </ul>
+            </div>
+            <div class="service-visual">
+                <img src="images/service-sustain.jpg" alt="Sustain and Community Strategy">
+                <h3>The Peak</h3>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 PEAKFUND ADVISORS. All rights reserved.</p>
+        <div class="social-row">
+            <a href="https://www.facebook.com/share/1DsnXw8TES/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
