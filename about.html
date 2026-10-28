@@ -25,16 +25,20 @@
             border: 5px solid var(--gold);
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             flex-shrink: 0;
-            background-color: #f0f4f8; /* Gives a clean background if the image is transparent */
+            background-color: #f0f4f8;
         }
         
-        /* Image Styling - Shifted down so heads fit */
+        /* Default Image Styling (Zulaikhor) */
         .team-img { 
             width: 100%; 
             height: 100%; 
             object-fit: cover; 
-            object-position: center 25%; /* Shifts the image down inside the circle */
-            transform: scale(1.1); /* Slight zoom to fill the circle nicely */
+            object-position: center 15%; /* Perfectly centers Zulaikhor */
+        }
+
+        /* Specific Image Styling for Imran to shift it down */
+        .imran-img {
+            object-position: center 30% !important; /* Pushes the crop further down */
         }
         
         .team-info h3 { font-size: 1.8rem; color: var(--navy); margin-bottom: 5px; font-family: 'Montserrat', sans-serif; font-weight: 900; text-transform: uppercase;}
@@ -98,7 +102,8 @@
             <!-- Imran -->
             <div class="team-member">
                 <div class="team-img-container">
-                    <img src="images/imran.jpg" alt="Imran Abdulazeez" class="team-img" style="object-position: center 40%;">
+                    <!-- Added the specific "imran-img" class here -->
+                    <img src="images/imran.jpg" alt="Imran Abdulazeez" class="team-img imran-img">
                 </div>
                 <div class="team-info">
                     <h3>Imran Abdulazeez</h3>
