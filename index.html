@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEAKFUND ADVISORS | From Vision to Funding</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Updated Fonts: Poppins for headers, Inter for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
         /* Hero Layout */
         .hero { padding: 80px 5% 100px; text-align: left; display: flex; align-items: center; justify-content: space-between; gap: 50px; max-width: 1200px; margin: 0 auto; }
         .hero-content { flex: 1; }
-        .hero-content h1 { font-size: 4.5rem; margin-bottom: 20px; line-height: 1.1; }
+        .hero-content h1 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 4.5rem; margin-bottom: 20px; line-height: 1.1; letter-spacing: -1px;}
         .hero-content p { font-size: 1.2rem; margin-bottom: 40px; color: var(--text-muted); }
         .hero-btns { display: flex; gap: 20px; }
         
@@ -19,62 +20,59 @@
         .hero-card { flex: 0 0 400px; background: var(--white); border-radius: 12px; padding: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border: 1px solid #E2E8F0; transform: rotate(2deg); transition: opacity 0.5s ease-in-out; position: relative; }
         .hero-card:hover { transform: rotate(0deg) scale(1.02); }
         .hero-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; background: #e2e8f0;}
-        .hero-card h3 { font-size: 1.2rem; margin-bottom: 5px; color: var(--navy); font-family: 'Montserrat', sans-serif; font-weight: 800;}
-        .hero-card .amount { font-size: 1.6rem; color: var(--gold); font-family: 'Montserrat', sans-serif; font-weight: 900; }
-        .hero-card .platform { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-family: 'Montserrat', sans-serif; font-weight: 700;}
+        .hero-card h3 { font-size: 1.2rem; margin-bottom: 5px; color: var(--navy); font-family: 'Poppins', sans-serif; font-weight: 800;}
+        .hero-card .amount { font-size: 1.6rem; color: var(--gold); font-family: 'Poppins', sans-serif; font-weight: 900; }
+        .hero-card .platform { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-family: 'Poppins', sans-serif; font-weight: 700;}
+
+        /* NEW: Live Activity Ticker */
+        .live-ticker { background: var(--navy); color: var(--white); padding: 15px 5%; display: flex; align-items: center; overflow: hidden; border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold); }
+        .ticker-label { display: flex; align-items: center; gap: 10px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; white-space: nowrap; background: var(--navy); padding-right: 20px; z-index: 2; }
+        .pulse-dot { width: 10px; height: 10px; background: #4CAF50; border-radius: 50%; box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); animation: pulse 2s infinite; }
+        .ticker-content { display: flex; white-space: nowrap; animation: scroll 20s linear infinite; gap: 40px; font-size: 0.95rem; font-family: 'Inter', sans-serif;}
+        .ticker-content span { color: var(--text-muted); }
+        .ticker-content strong { color: var(--gold); }
+        
+        @keyframes pulse { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); } }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
         /* 3 Pillars */
         .pillars-section { padding: 80px 5%; background: var(--white); text-align: center; }
-        .pillars-section h2 { font-size: 2.5rem; margin-bottom: 60px; color: var(--navy); line-height: 1.2; }
+        .pillars-section h2 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 2.5rem; margin-bottom: 60px; color: var(--navy); line-height: 1.2; }
         .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 0 auto; }
         .pillar-card { background: var(--off-white); border-radius: 8px; overflow: hidden; text-align: left; transition: transform 0.3s; border: 1px solid #E2E8F0; }
         .pillar-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
         .pillar-card img { width: 100%; height: 250px; object-fit: cover; }
         .pillar-content { padding: 30px; background: var(--white); border-top: 4px solid var(--gold); }
-        .pillar-content h3 { font-size: 1.4rem; margin-bottom: 15px; color: var(--navy); font-family: 'Montserrat', sans-serif; font-weight: 800;}
+        .pillar-content h3 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.4rem; margin-bottom: 15px; color: var(--navy); }
         .pillar-content p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
 
         /* Platform Strip */
         .platform-strip { padding: 40px 5%; background: var(--navy); text-align: center; color: var(--white); display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-        .platform-strip p { font-size: 1.2rem; font-weight: 700; font-family: 'Montserrat', sans-serif; letter-spacing: 2px; opacity: 0.8; }
+        .platform-strip p { font-family: 'Poppins', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; opacity: 0.8; }
 
-        /* Selected Campaigns - 3x2 Grid */
+        /* Selected Campaigns */
         .funding-peak { padding: 80px 5%; text-align: center; background: transparent; }
-        .funding-peak h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--navy); }
+        .funding-peak h2 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 2.5rem; margin-bottom: 20px; color: var(--navy); }
         .funding-peak p.subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 40px;}
-        
         .peaks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        
         .peak-card { background: var(--white); padding: 20px; border-radius: 8px; text-decoration: none; color: var(--navy); transition: transform 0.3s, box-shadow 0.3s; border: 1px solid #E2E8F0; display: flex; flex-direction: column; box-shadow: 0 4px 10px rgba(0,0,0,0.03); text-align: left; }
         .peak-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); border-color: var(--sky-blue); }
         .peak-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; background: #e2e8f0;}
-        .peak-card h3 { font-size: 1.1rem; margin-bottom: 5px; font-family: 'Montserrat', sans-serif; font-weight: 800; }
-        .peak-card .tag { font-size: 0.75rem; font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: 1px; margin-bottom: 10px; }
+        .peak-card h3 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.1rem; margin-bottom: 5px; }
+        .peak-card .tag { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 10px; }
         .tag-kickstarter { color: var(--sky-blue); }
         .tag-indiegogo { color: var(--gold); }
         .tag-seed { color: #4CAF50; }
         .tag-gofundme { color: #00B964; }
         .tag-grant { color: #8E44AD; }
 
-        .btn-see-all { display: inline-block; margin-top: 50px; background: var(--navy); color: var(--white); padding: 15px 30px; border-radius: 4px; text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 800; transition: background 0.3s; }
+        .btn-see-all { display: inline-block; margin-top: 50px; background: var(--navy); color: var(--white); padding: 15px 30px; border-radius: 4px; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 800; transition: background 0.3s; }
         .btn-see-all:hover { background: var(--gold); color: var(--navy); }
 
-        /* THE UPDATED LOGO STYLING */
-        .logo { 
-            background: var(--white); 
-            padding: 10px 20px; /* More padding around the logo */
-            border-radius: 8px; 
-            display: inline-flex; 
-            align-items: center; 
-            transition: transform 0.2s; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
+        /* Logo */
+        .logo { background: var(--white); padding: 10px 20px; border-radius: 8px; display: inline-flex; align-items: center; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
         .logo:hover { transform: scale(1.02); }
-        .logo img { 
-            height: 55px; /* Made the logo much larger and bolder */
-            width: auto; 
-            display: block; 
-        }
+        .logo img { height: 55px; width: auto; display: block; }
 
         @media (max-width: 900px) {
             .hero { flex-direction: column; text-align: center; }
@@ -84,15 +82,14 @@
             .pillars-grid { grid-template-columns: 1fr; }
             .platform-strip { flex-direction: column; gap: 15px; }
             .peaks-grid { grid-template-columns: 1fr; }
+            .ticker-label { display: none; } /* Hide label on mobile to save space */
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <!-- YOUR IMAGE LOGO -->
         <a href="index.html" class="logo"><img src="images/logo.png" alt="PeakFund Advisors"></a>
-        
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
@@ -119,6 +116,25 @@
             <p class="amount" id="card-amount">$4,964,374 Raised</p>
         </div>
     </header>
+
+    <!-- NEW: THE LIVE ACTIVITY TICKER -->
+    <div class="live-ticker">
+        <div class="ticker-label">
+            <div class="pulse-dot"></div>
+            LIVE ACTIVITY
+        </div>
+        <div class="ticker-content">
+            <span>Just helped <strong>URXR Glasses</strong> hit their $50k goal! <i class="fa-solid fa-arrow-trend-up" style="color: #4CAF50;"></i></span>
+            <span>New Grant Application submitted for a <strong>Sundance documentary</strong>. <i class="fa-solid fa-file-signature" style="color: var(--gold);"></i></span>
+            <span><strong>Misen Dutch Oven</strong> just crossed 42,000 backers. <i class="fa-solid fa-users" style="color: var(--sky-blue);"></i></span>
+            <span>Launching a new campaign for an <strong>Indie Film Project</strong> in 3 days. <i class="fa-solid fa-rocket" style="color: var(--gold);"></i></span>
+            <!-- Duplicated for seamless scrolling -->
+            <span>Just helped <strong>URXR Glasses</strong> hit their $50k goal! <i class="fa-solid fa-arrow-trend-up" style="color: #4CAF50;"></i></span>
+            <span>New Grant Application submitted for a <strong>Sundance documentary</strong>. <i class="fa-solid fa-file-signature" style="color: var(--gold);"></i></span>
+            <span><strong>Misen Dutch Oven</strong> just crossed 42,000 backers. <i class="fa-solid fa-users" style="color: var(--sky-blue);"></i></span>
+            <span>Launching a new campaign for an <strong>Indie Film Project</strong> in 3 days. <i class="fa-solid fa-rocket" style="color: var(--gold);"></i></span>
+        </div>
+    </div>
 
     <section class="pillars-section">
         <h2>Crowdfunding, grants, and marketing<br>— all under one roof.</h2>
