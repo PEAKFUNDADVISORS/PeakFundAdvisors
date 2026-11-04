@@ -23,7 +23,7 @@
         .hero-card .amount { font-size: 1.6rem; color: var(--gold); font-family: 'Poppins', sans-serif; font-weight: 900; }
         .hero-card .platform { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-family: 'Poppins', sans-serif; font-weight: 700;}
 
-        /* LIVE ACTIVITY TICKER - UPDATED FOR VISIBILITY */
+        /* LIVE ACTIVITY TICKER */
         .live-ticker { background: var(--warm-ivory); color: var(--navy); padding: 15px 5%; display: flex; align-items: center; overflow: hidden; border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         .ticker-label { display: flex; align-items: center; gap: 10px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; white-space: nowrap; background: var(--warm-ivory); padding-right: 20px; z-index: 2; color: var(--navy); }
         .pulse-dot { width: 10px; height: 10px; background: #4CAF50; border-radius: 50%; box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); animation: pulse 2s infinite; }
@@ -48,7 +48,7 @@
         .platform-strip { padding: 40px 5%; background: var(--navy); text-align: center; color: var(--white); display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
         .platform-strip p { font-family: 'Poppins', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; opacity: 0.8; }
 
-        /* NEW: LIVE & PRELAUNCH SECTION */
+        /* LIVE & PRELAUNCH SECTION */
         .campaigns-section { padding: 80px 5%; background: transparent; text-align: center; }
         .campaigns-section h2 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 2.5rem; margin-bottom: 20px; color: var(--navy); }
         .campaigns-section p.subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; }
@@ -66,6 +66,29 @@
         .badge { display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 0.65rem; font-weight: 800; font-family: 'Poppins', sans-serif; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
         .badge-live { background: #E8F5E9; color: #2E7D32; }
         .badge-pre { background: #FFF3E0; color: #E65100; }
+
+        /* NEW BUTTON STYLING */
+        .btn-portfolio { 
+            display: inline-block; 
+            margin-top: 20px; 
+            background: var(--gold); 
+            color: var(--navy); 
+            padding: 18px 40px; 
+            border-radius: 6px; 
+            text-decoration: none; 
+            font-family: 'Poppins', sans-serif; 
+            font-weight: 800; 
+            font-size: 1.1rem;
+            transition: transform 0.3s, background 0.3s; 
+            box-shadow: 0 4px 15px rgba(245, 166, 35, 0.3);
+            border: 2px solid var(--gold);
+        }
+        .btn-portfolio:hover { 
+            transform: translateY(-3px);
+            background: var(--navy); 
+            color: var(--white); 
+            border-color: var(--navy);
+        }
         
         @media (max-width: 900px) {
             .hero { flex-direction: column; text-align: center; }
@@ -99,7 +122,7 @@
     <header class="hero">
         <div class="hero-content">
             <h1>Every Great Vision <br>Deserves Funding.</h1>
-            <p>We help filmmakers, creators, and founders secure the capital to bring bold ideas to life — through crowdfunding, grants, and full-stack growth strategy.</p>
+            <p>We help filmmakers, creators, and founders secure the capital to bring bold ideas to life through crowdfunding, grants, and full stack growth strategy.</p>
             <div class="hero-btns">
                 <a href="contact.html" class="btn">Book a Free Call</a>
                 <a href="success-stories.html" class="btn-outline">See Success Stories</a>
@@ -134,20 +157,20 @@
     </div>
 
     <section class="pillars-section">
-        <h2>Crowdfunding, grants, and marketing<br>— all under one roof.</h2>
+        <h2>Crowdfunding, grants, and marketing<br>all under one roof.</h2>
         <div class="pillars-grid">
             <div class="pillar-card">
                 <img src="images/service-fund.jpg" alt="Funding and Grants">
                 <div class="pillar-content">
                     <h3>FUNDING & GRANTS</h3>
-                    <p>Crowdfunding strategy, grant research & writing, and business proposal preparation to secure your capital.</p>
+                    <p>Crowdfunding strategy, grant research and writing, and business proposal preparation to secure your capital.</p>
                 </div>
             </div>
             <div class="pillar-card">
                 <img src="images/service-launch.jpg" alt="Launch and Design">
                 <div class="pillar-content">
                     <h3>LAUNCH & DESIGN</h3>
-                    <p>Investor-grade pitch decks, press releases, and campaign page design to make sure your project gets seen.</p>
+                    <p>Investor grade pitch decks, press releases, and campaign page design to make sure your project gets seen.</p>
                 </div>
             </div>
             <div class="pillar-card">
@@ -167,10 +190,10 @@
         <p>SEED&SPARK</p>
     </div>
 
-    <!-- NEW: LIVE & PRELAUNCH CAMPAIGNS -->
+    <!-- LIVE & PRELAUNCH CAMPAIGNS -->
     <section class="campaigns-section">
         <h2>Active & Prelaunch Campaigns</h2>
-        <p class="subtitle">We don't just talk about crowdfunding—we are actively managing and preparing campaigns right now.</p>
+        <p class="subtitle">We do not just talk about crowdfunding. We are actively managing and preparing campaigns right now.</p>
 
         <!-- LIVE CAMPAIGNS -->
         <div class="campaign-group-title"><i class="fa-solid fa-circle-play"></i> Currently Live</div>
@@ -222,7 +245,8 @@
             </a>
         </div>
 
-        <a href="success-stories.html" class="btn-see-all">See Our Full Portfolio</a>
+        <!-- THE NEW BUTTON -->
+        <a href="success-stories.html" class="btn-portfolio">See Our Full Portfolio</a>
     </section>
 
     <section class="journey">
