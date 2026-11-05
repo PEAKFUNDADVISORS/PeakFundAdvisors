@@ -4,13 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | PEAKFUND ADVISORS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* FOOTER STYLES */
+        footer { background: var(--navy); color: var(--white); padding: 80px 5% 30px 5%; border-top: 5px solid var(--gold); width: 100%; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; max-width: 1200px; margin: 0 auto 60px auto; }
+        .footer-brand h3 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 1.8rem; color: var(--gold); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;}
+        .footer-brand p { color: #A0AEC0; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+        .footer-links h4, .footer-newsletter h4 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.1rem; margin-bottom: 20px; color: var(--white); text-transform: uppercase; letter-spacing: 1px;}
+        .footer-links ul { list-style: none; padding: 0; margin: 0;}
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: #A0AEC0; text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--gold); padding-left: 5px; }
+        .footer-newsletter p { color: #A0AEC0; font-size: 0.95rem; margin-bottom: 15px; }
+        .newsletter-form { display: flex; gap: 10px; }
+        .newsletter-form input { flex: 1; padding: 12px; border-radius: 4px; border: 1px solid #2D3748; background: #1A365D; color: var(--white); font-family: 'Inter', sans-serif; outline: none; }
+        .newsletter-form input::placeholder { color: #718096; }
+        .newsletter-form button { background: var(--gold); color: var(--navy); border: none; padding: 12px 20px; border-radius: 4px; font-weight: 800; font-family: 'Poppins', sans-serif; cursor: pointer; transition: transform 0.2s; }
+        .newsletter-form button:hover { transform: scale(1.05); }
+        .footer-bottom { border-top: 1px solid #2D3748; padding-top: 30px; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 20px;}
+        .footer-bottom p { color: #718096; font-size: 0.9rem; }
+        .social-icons { display: flex; gap: 15px; }
+        .social-icons a { color: var(--white); font-size: 1.2rem; background: #1A365D; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: all 0.3s; }
+        .social-icons a:hover { background: var(--gold); color: var(--navy); transform: translateY(-3px); }
+        .social-icons svg { width: 18px; height: 18px; fill: var(--white); transition: fill 0.3s; }
+        .social-icons a:hover svg { fill: var(--navy); }
+
+        @media (max-width: 900px) {
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
 </head>
 <body>
     <nav>
-        <a href="index.html" class="logo">PEAK<span>FUND</span></a>
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="PeakFund Advisors"></a>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
@@ -19,19 +49,67 @@
             <a href="contact.html" class="btn">Book a Call</a>
         </div>
     </nav>
+
     <section class="container" style="text-align: center;">
-        <h1 style="font-size: 3rem; margin-bottom: 20px;">Let's Talk About Your Project</h1>
-        <p style="color: #B8C7D9; font-size: 1.2rem; margin-bottom: 40px;">Ready to climb? Fill out the form below or reach out directly.</p>
-        <div style="background: var(--navy-light); padding: 40px; border-radius: 8px; max-width: 600px; margin: 0 auto; text-align: left;">
-            <p style="margin-bottom: 20px;"><strong>Email:</strong> hello@peakfundadvisors.com</p>
-            <p style="margin-bottom: 20px;"><strong>Response Time:</strong> We reply within 24 hours.</p>
-            <p style="margin-bottom: 20px;"><strong>Book a Call:</strong> [Insert your Calendly link here]</p>
+        <h1 style="font-size: 3rem; margin-bottom: 20px; font-family: 'Poppins', sans-serif; font-weight: 900; color: var(--navy);">Let's Talk About Your Project</h1>
+        <p style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 40px;">Ready to climb? Fill out the form below or reach out directly.</p>
+        
+        <div style="background: var(--white); padding: 40px; border-radius: 8px; max-width: 600px; margin: 0 auto; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">
+            <p style="margin-bottom: 20px; font-size: 1.1rem;"><strong>Email:</strong> hello@peakfundadvisors.com</p>
+            <p style="margin-bottom: 20px; font-size: 1.1rem;"><strong>Response Time:</strong> We reply within 24 hours.</p>
+            <p style="margin-bottom: 20px; font-size: 1.1rem;"><strong>Book a Call:</strong> [Insert your Calendly link here]</p>
         </div>
     </section>
+
+    <!-- DETAILED FOOTER -->
     <footer>
-        <p>&copy; 2026 PEAKFUND ADVISORS. All rights reserved.</p>
-        <div class="social-row">
-            <a href="https://www.facebook.com/share/1DsnXw8TES/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>PEAKFUND ADVISORS</h3>
+                <p>We help filmmakers, creators, and founders secure the capital to bring bold ideas to life through crowdfunding, grants, and full stack growth strategy.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="success-stories.html">Success Stories</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Book a Call</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html">Crowdfunding</a></li>
+                    <li><a href="services.html">Grant Writing</a></li>
+                    <li><a href="services.html">Pitch Decks</a></li>
+                    <li><a href="services.html">Ads Management</a></li>
+                    <li><a href="services.html">Press Releases</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Get grant deadlines and crowdfunding tips monthly.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 PEAKFUND ADVISORS. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/1DsnXw8TES/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank" aria-label="Fiverr">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.6 2.6h-3.4c-1.6 0-2.9 1.3-2.9 2.9v2.1h-5.1v-2c0-1.7 1.3-3 3-3h3V0h-3c-2.8 0-5.1 2.3-5.1 5.1v2.5H3.4V5.1h3V2.6h-3C1.5 2.6.2 3.9.2 5.5v13.9c0 1.6 1.3 2.9 2.9 2.9h3.5v-2.5h-3v-8.7h5.1v8.7c0 1.6 1.3 2.9 2.9 2.9h3.4v-2.5h-3.4c-.2 0-.4-.2-.4-.4V7.6h5.5c1.6 0 2.9-1.3 2.9-2.9V2.6z"/>
+                    </svg>
+                </a>
+            </div>
         </div>
     </footer>
 </body>
