@@ -86,14 +86,14 @@
         .btn-portfolio:hover { transform: translateY(-3px); background: var(--navy); color: var(--white); border-color: var(--navy); }
 
         /* DETAILED FOOTER */
-        footer { background: var(--navy); color: var(--white); padding: 80px 5% 30px 5%; border-top: 5px solid var(--gold); }
+        footer { background: var(--navy); color: var(--white); padding: 80px 5% 30px 5%; border-top: 5px solid var(--gold); width: 100%; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; max-width: 1200px; margin: 0 auto 60px auto; }
         
         .footer-brand h3 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 1.8rem; color: var(--gold); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;}
         .footer-brand p { color: #A0AEC0; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
         
         .footer-links h4, .footer-newsletter h4 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.1rem; margin-bottom: 20px; color: var(--white); text-transform: uppercase; letter-spacing: 1px;}
-        .footer-links ul { list-style: none; }
+        .footer-links ul { list-style: none; padding: 0; margin: 0;}
         .footer-links li { margin-bottom: 12px; }
         .footer-links a { color: #A0AEC0; text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
         .footer-links a:hover { color: var(--gold); padding-left: 5px; }
@@ -112,9 +112,9 @@
         .social-icons a { color: var(--white); font-size: 1.2rem; background: #1A365D; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: all 0.3s; }
         .social-icons a:hover { background: var(--gold); color: var(--navy); transform: translateY(-3px); }
         
-        /* Custom SVG Icon sizing */
-        .social-icons img { width: 18px; height: 18px; filter: brightness(0) invert(1); transition: filter 0.3s; }
-        .social-icons a:hover img { filter: brightness(0) invert(0); }
+        /* INLINE SVG FIVERR ICON FIX */
+        .social-icons svg { width: 18px; height: 18px; fill: var(--white); transition: fill 0.3s; }
+        .social-icons a:hover svg { fill: var(--navy); }
 
         @media (max-width: 900px) {
             .hero { flex-direction: column; text-align: center; }
@@ -359,9 +359,11 @@
                 <a href="https://www.facebook.com/share/1DsnXw8TES/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <!-- Updated Fiverr Icon to use the uploaded image -->
+                <!-- Inline SVG for Fiverr -->
                 <a href="#" target="_blank" aria-label="Fiverr">
-                    <img src="images/fiverr.svg" alt="Fiverr">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.6 2.6h-3.4c-1.6 0-2.9 1.3-2.9 2.9v2.1h-5.1v-2c0-1.7 1.3-3 3-3h3V0h-3c-2.8 0-5.1 2.3-5.1 5.1v2.5H3.4V5.1h3V2.6h-3C1.5 2.6.2 3.9.2 5.5v13.9c0 1.6 1.3 2.9 2.9 2.9h3.5v-2.5h-3v-8.7h5.1v8.7c0 1.6 1.3 2.9 2.9 2.9h3.4v-2.5h-3.4c-.2 0-.4-.2-.4-.4V7.6h5.5c1.6 0 2.9-1.3 2.9-2.9V2.6z"/>
+                    </svg>
                 </a>
             </div>
         </div>
@@ -390,14 +392,4 @@
         const cardImg = document.getElementById("card-img");
         const cardPlatform = document.getElementById("card-platform");
         const cardTitle = document.getElementById("card-title");
-        const cardAmount = document.getElementById("card-amount");
-
-        function changeCard() {
-            document.getElementById("dynamic-card").style.opacity = 0;
-            setTimeout(() => {
-                currentIndex = (currentIndex + 1) % campaigns.length;
-                cardImg.src = campaigns[currentIndex].img;
-                cardPlatform.textContent = campaigns[currentIndex].platform;
-                cardTitle.textContent = campaigns[currentIndex].title;
-                cardAmount.textContent = campaigns[currentIndex].amount;
-               
+        const cardAmount = document.getElementById("card-amount
