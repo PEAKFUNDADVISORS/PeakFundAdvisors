@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEAKFUND ADVISORS | From Vision to Funding</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
@@ -23,14 +23,15 @@
         .hero-card .amount { font-size: 1.6rem; color: var(--gold); font-family: 'Poppins', sans-serif; font-weight: 900; }
         .hero-card .platform { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-family: 'Poppins', sans-serif; font-weight: 700;}
 
-        /* STATS BAR */
-        .stats-bar { background: var(--navy); padding: 50px 5%; display: flex; justify-content: center; gap: 80px; border-top: 3px solid var(--gold); border-bottom: 3px solid var(--gold); flex-wrap: wrap; }
+        /* NEW PREMIUM STATS BAR (Floating Card) */
+        .stats-wrapper { padding: 0 5%; background: transparent; margin-top: -50px; position: relative; z-index: 10; margin-bottom: 60px;}
+        .stats-bar { background: var(--white); padding: 40px 5%; display: flex; justify-content: center; gap: 80px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border: 1px solid #E2E8F0; max-width: 1000px; margin: 0 auto; flex-wrap: wrap; }
         .stat-item { text-align: center; }
-        .stat-item h3 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 3.5rem; color: var(--gold); line-height: 1; margin-bottom: 10px; }
-        .stat-item p { color: var(--white); font-family: 'Inter', sans-serif; font-weight: 500; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+        .stat-item h3 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 3.5rem; color: var(--navy); line-height: 1; margin-bottom: 10px; }
+        .stat-item p { color: var(--gold); font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; }
 
         /* LIVE ACTIVITY TICKER */
-        .live-ticker { background: var(--warm-ivory); color: var(--navy); padding: 15px 5%; display: flex; align-items: center; overflow: hidden; border-bottom: 1px solid #E2E8F0; }
+        .live-ticker { background: var(--warm-ivory); color: var(--navy); padding: 15px 5%; display: flex; align-items: center; overflow: hidden; border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         .ticker-label { display: flex; align-items: center; gap: 10px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; white-space: nowrap; background: var(--warm-ivory); padding-right: 20px; z-index: 2; color: var(--navy); }
         .pulse-dot { width: 10px; height: 10px; background: #4CAF50; border-radius: 50%; box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); animation: pulse 2s infinite; }
         .ticker-content { display: flex; white-space: nowrap; animation: scroll 25s linear infinite; gap: 40px; font-size: 0.95rem; font-family: 'Inter', sans-serif; font-weight: 500;}
@@ -116,6 +117,7 @@
             .hero-content h1 { font-size: 3rem; }
             .hero-btns { justify-content: center; }
             .hero-card { display: none; }
+            .stats-wrapper { margin-top: 20px; }
             .stats-bar { flex-direction: column; gap: 30px; }
             .bento-grid { grid-template-columns: 1fr; }
             .platform-strip { flex-direction: column; gap: 15px; }
@@ -161,21 +163,23 @@
         </div>
     </header>
 
-    <!-- STATS BAR -->
-    <section class="stats-bar">
-        <div class="stat-item">
-            <h3>$10M+</h3>
-            <p>Raised</p>
-        </div>
-        <div class="stat-item">
-            <h3>500+</h3>
-            <p>Backers</p>
-        </div>
-        <div class="stat-item">
-            <h3>100+</h3>
-            <p>Grants Won</p>
-        </div>
-    </section>
+    <!-- STATS BAR (Floating Card) -->
+    <div class="stats-wrapper">
+        <section class="stats-bar">
+            <div class="stat-item">
+                <h3>$10M+</h3>
+                <p>Raised</p>
+            </div>
+            <div class="stat-item">
+                <h3>500+</h3>
+                <p>Backers</p>
+            </div>
+            <div class="stat-item">
+                <h3>100+</h3>
+                <p>Grants Won</p>
+            </div>
+        </section>
+    </div>
 
     <!-- LIVE ACTIVITY TICKER -->
     <div class="live-ticker">
