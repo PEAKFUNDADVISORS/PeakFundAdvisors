@@ -4,60 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | PEAKFUND ADVISORS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
         .about-hero { text-align: center; margin-bottom: 80px; }
-        .about-hero h1 { font-size: 3.5rem; color: var(--navy); margin-bottom: 30px; font-family: 'Montserrat', sans-serif; font-weight: 900;}
+        .about-hero h1 { font-size: 3.5rem; color: var(--navy); margin-bottom: 30px; font-family: 'Poppins', sans-serif; font-weight: 900;}
         .about-hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 900px; margin: 0 auto 20px auto; line-height: 1.8; text-align: left; }
         
-        /* Team Section - Circular Frames */
         .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin: 80px 0; }
         .team-member { display: flex; align-items: center; gap: 35px; }
         
-        /* Circular Image Container */
-        .team-img-container {
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 5px solid var(--gold);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            flex-shrink: 0;
-            background-color: #f0f4f8;
-        }
+        .team-img-container { width: 280px; height: 280px; border-radius: 50%; overflow: hidden; border: 5px solid var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.15); flex-shrink: 0; background-color: #f0f4f8; }
+        .team-img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
+        .imran-img { object-position: center 30% !important; }
         
-        /* Default Image Styling (Zulaikhor) */
-        .team-img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            object-position: center 15%; /* Perfectly centers Zulaikhor */
-        }
-
-        /* Specific Image Styling for Imran to shift it down */
-        .imran-img {
-            object-position: center 30% !important; /* Pushes the crop further down */
-        }
-        
-        .team-info h3 { font-size: 1.8rem; color: var(--navy); margin-bottom: 5px; font-family: 'Montserrat', sans-serif; font-weight: 900; text-transform: uppercase;}
-        .team-info h4 { font-size: 1rem; color: var(--gold); margin-bottom: 15px; font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;}
+        .team-info h3 { font-size: 1.8rem; color: var(--navy); margin-bottom: 5px; font-family: 'Poppins', sans-serif; font-weight: 900; text-transform: uppercase;}
+        .team-info h4 { font-size: 1rem; color: var(--gold); margin-bottom: 15px; font-family: 'Poppins', sans-serif; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;}
         .team-info p { color: var(--text-muted); font-size: 1rem; line-height: 1.6; }
 
-        /* Mission Box */
         .mission-box { background: var(--white); padding: 50px; border-radius: 12px; margin-top: 60px; border-left: 6px solid var(--sky-blue); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .mission-box h3 { color: var(--navy); margin-bottom: 20px; font-size: 2rem; font-family: 'Montserrat', sans-serif; font-weight: 900;}
+        .mission-box h3 { color: var(--navy); margin-bottom: 20px; font-size: 2rem; font-family: 'Poppins', sans-serif; font-weight: 900;}
         .mission-box p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 20px; line-height: 1.8; }
         .mission-box ul { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; list-style: none; margin-top: 30px;}
         .mission-box li { color: var(--navy); font-weight: 500; font-size: 1.05rem; display: flex; align-items: center; gap: 10px;}
         .mission-box li i { color: var(--gold); font-size: 1.2rem; }
+
+        /* FOOTER STYLES */
+        footer { background: var(--navy); color: var(--white); padding: 80px 5% 30px 5%; border-top: 5px solid var(--gold); width: 100%; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; max-width: 1200px; margin: 0 auto 60px auto; }
+        .footer-brand h3 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 1.8rem; color: var(--gold); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;}
+        .footer-brand p { color: #A0AEC0; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+        .footer-links h4, .footer-newsletter h4 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.1rem; margin-bottom: 20px; color: var(--white); text-transform: uppercase; letter-spacing: 1px;}
+        .footer-links ul { list-style: none; padding: 0; margin: 0;}
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: #A0AEC0; text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--gold); padding-left: 5px; }
+        .footer-newsletter p { color: #A0AEC0; font-size: 0.95rem; margin-bottom: 15px; }
+        .newsletter-form { display: flex; gap: 10px; }
+        .newsletter-form input { flex: 1; padding: 12px; border-radius: 4px; border: 1px solid #2D3748; background: #1A365D; color: var(--white); font-family: 'Inter', sans-serif; outline: none; }
+        .newsletter-form input::placeholder { color: #718096; }
+        .newsletter-form button { background: var(--gold); color: var(--navy); border: none; padding: 12px 20px; border-radius: 4px; font-weight: 800; font-family: 'Poppins', sans-serif; cursor: pointer; transition: transform 0.2s; }
+        .newsletter-form button:hover { transform: scale(1.05); }
+        .footer-bottom { border-top: 1px solid #2D3748; padding-top: 30px; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 20px;}
+        .footer-bottom p { color: #718096; font-size: 0.9rem; }
+        .social-icons { display: flex; gap: 15px; }
+        .social-icons a { color: var(--white); font-size: 1.2rem; background: #1A365D; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: all 0.3s; }
+        .social-icons a:hover { background: var(--gold); color: var(--navy); transform: translateY(-3px); }
+        .social-icons svg { width: 18px; height: 18px; fill: var(--white); transition: fill 0.3s; }
+        .social-icons a:hover svg { fill: var(--navy); }
 
         @media (max-width: 900px) { 
             .team-grid { grid-template-columns: 1fr; gap: 40px; }
             .team-member { flex-direction: column; text-align: center; } 
             .mission-box ul { grid-template-columns: 1fr; }
             .about-hero p { text-align: center; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .footer-bottom { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
@@ -74,20 +77,15 @@
     </nav>
     
     <section class="container">
-        
-        <!-- Brand Story Hero -->
         <div class="about-hero">
             <h1>Our Story</h1>
             <p>Founded in 2020, PEAKFUND ADVISORS was born out of a desire to bridge the gap between brilliant ideas and the capital required to bring them to life. We noticed a recurring trend: countless incredible projects from filmmakers, creators, and innovators were failing. It was rarely due to a lack of passion or a bad idea. Instead, they struggled with poor market positioning, an inability to reach the right audience, and ineffective funding strategies.</p>
-            
             <p>We set out to change that narrative. Over the years, we have dedicated ourselves to mastering the intricacies of crowdfunding, grant acquisition, and digital marketing. We have helped hundreds of creators transform their concepts into fully funded realities. At PEAKFUND ADVISORS, we do not simply offer advice from the sidelines. We become your strategic partners, climbing with you every step of the way from Base Camp to the Peak.</p>
         </div>
 
-        <!-- Meet the Team -->
-        <h2 style="text-align: center; font-size: 2.5rem; color: var(--navy); margin-bottom: 50px; font-family: 'Montserrat', sans-serif; font-weight: 900;">Meet the Leadership</h2>
+        <h2 style="text-align: center; font-size: 2.5rem; color: var(--navy); margin-bottom: 50px; font-family: 'Poppins', sans-serif; font-weight: 900;">Meet the Leadership</h2>
         
         <div class="team-grid">
-            <!-- Zulaikhor -->
             <div class="team-member">
                 <div class="team-img-container">
                     <img src="images/founder.jpg" alt="Zulaikhor Adebayo" class="team-img">
@@ -98,11 +96,8 @@
                     <p>Zulaikhor leads the strategic vision at PEAKFUND. With a deep understanding of the crowdfunding landscape and grant acquisition, she ensures every client's campaign is positioned for maximum impact and long-term success.</p>
                 </div>
             </div>
-
-            <!-- Imran -->
             <div class="team-member">
                 <div class="team-img-container">
-                    <!-- Added the specific "imran-img" class here -->
                     <img src="images/imran.jpg" alt="Imran Abdulazeez" class="team-img imran-img">
                 </div>
                 <div class="team-info">
@@ -113,11 +108,9 @@
             </div>
         </div>
 
-        <!-- Mission & Values -->
         <div class="mission-box">
             <h3>Our Mission & Values</h3>
             <p>We are driven by a commitment to transparency, data-backed strategy, and genuine partnership. We believe that funding is the fuel for innovation, and our mission is to ensure that no visionary project is left behind due to a lack of capital.</p>
-            
             <ul>
                 <li><i class="fa-solid fa-shield-halved"></i> <strong>Transparency:</strong> Clear metrics and honest feedback.</li>
                 <li><i class="fa-solid fa-chart-line"></i> <strong>Strategy:</strong> Data-driven decisions that maximize ROI.</li>
@@ -127,10 +120,55 @@
         </div>
     </section>
 
+    <!-- DETAILED FOOTER -->
     <footer>
-        <p>&copy; 2026 PEAKFUND ADVISORS. All rights reserved.</p>
-        <div class="social-row">
-            <a href="https://www.facebook.com/share/1DsnXw8TES/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>PEAKFUND ADVISORS</h3>
+                <p>We help filmmakers, creators, and founders secure the capital to bring bold ideas to life through crowdfunding, grants, and full stack growth strategy.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="success-stories.html">Success Stories</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Book a Call</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html">Crowdfunding</a></li>
+                    <li><a href="services.html">Grant Writing</a></li>
+                    <li><a href="services.html">Pitch Decks</a></li>
+                    <li><a href="services.html">Ads Management</a></li>
+                    <li><a href="services.html">Press Releases</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Get grant deadlines and crowdfunding tips monthly.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 PEAKFUND ADVISORS. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/1DsnXw8TES/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank" aria-label="Fiverr">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.6 2.6h-3.4c-1.6 0-2.9 1.3-2.9 2.9v2.1h-5.1v-2c0-1.7 1.3-3 3-3h3V0h-3c-2.8 0-5.1 2.3-5.1 5.1v2.5H3.4V5.1h3V2.6h-3C1.5 2.6.2 3.9.2 5.5v13.9c0 1.6 1.3 2.9 2.9 2.9h3.5v-2.5h-3v-8.7h5.1v8.7c0 1.6 1.3 2.9 2.9 2.9h3.4v-2.5h-3.4c-.2 0-.4-.2-.4-.4V7.6h5.5c1.6 0 2.9-1.3 2.9-2.9V2.6z"/>
+                    </svg>
+                </a>
+            </div>
         </div>
     </footer>
 </body>
