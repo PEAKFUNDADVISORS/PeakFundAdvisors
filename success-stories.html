@@ -4,36 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Success Stories | PEAKFUND ADVISORS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .section-title { font-size: 2.5rem; margin: 60px 0 20px; color: var(--navy); text-align: center; }
+        .section-title { font-size: 2.5rem; margin: 60px 0 20px; color: var(--navy); text-align: center; font-family: 'Poppins', sans-serif; font-weight: 900;}
         .section-subtitle { text-align: center; color: var(--text-muted); margin-bottom: 40px; font-size: 1.1rem; }
         
-        /* Changed to 3 columns to make cards smaller and cleaner */
         .case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 20px; }
         
         .case-study { background: var(--white); padding: 20px; border-radius: 8px; border-left: 4px solid var(--gold); display: flex; flex-direction: column; text-decoration: none; color: var(--navy); transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #E2E8F0; border-left-width: 4px;}
         .case-study:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); border-left-color: var(--sky-blue); }
-        .case-study h3 { font-size: 1.2rem; margin-bottom: 5px; color: var(--navy); font-family: 'Montserrat', sans-serif; font-weight: 800; }
+        .case-study h3 { font-size: 1.2rem; margin-bottom: 5px; color: var(--navy); font-family: 'Poppins', sans-serif; font-weight: 800; }
         
         .case-stats { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 15px; margin-top: 10px; }
-        .case-stats p { font-size: 0.95rem; color: var(--sky-blue); font-family: 'Montserrat', sans-serif; font-weight: 800; }
+        .case-stats p { font-size: 0.95rem; color: var(--sky-blue); font-family: 'Poppins', sans-serif; font-weight: 800; }
         .case-stats span { color: var(--text-muted); font-size: 0.75rem; display: block; font-family: 'Inter', sans-serif; font-weight: 400;}
         
-        /* Slightly shorter images so the text gets more room */
         .case-img { width: 100%; height: 160px; object-fit: cover; border-radius: 6px; margin-bottom: 15px; border: 1px solid #E2E8F0; background: #f0f0f0;}
         
-        .platform-tag { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 5px; }
+        .platform-tag { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 5px; }
         .tag-indiegogo { color: var(--gold); }
         .tag-kickstarter { color: var(--sky-blue); }
         .tag-seed { color: #4CAF50; }
         .tag-gofundme { color: #00B964; }
         .tag-grant { color: #8E44AD; }
 
+        /* FOOTER STYLES */
+        footer { background: var(--navy); color: var(--white); padding: 80px 5% 30px 5%; border-top: 5px solid var(--gold); width: 100%; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; max-width: 1200px; margin: 0 auto 60px auto; }
+        .footer-brand h3 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 1.8rem; color: var(--gold); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;}
+        .footer-brand p { color: #A0AEC0; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+        .footer-links h4, .footer-newsletter h4 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.1rem; margin-bottom: 20px; color: var(--white); text-transform: uppercase; letter-spacing: 1px;}
+        .footer-links ul { list-style: none; padding: 0; margin: 0;}
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: #A0AEC0; text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--gold); padding-left: 5px; }
+        .footer-newsletter p { color: #A0AEC0; font-size: 0.95rem; margin-bottom: 15px; }
+        .newsletter-form { display: flex; gap: 10px; }
+        .newsletter-form input { flex: 1; padding: 12px; border-radius: 4px; border: 1px solid #2D3748; background: #1A365D; color: var(--white); font-family: 'Inter', sans-serif; outline: none; }
+        .newsletter-form input::placeholder { color: #718096; }
+        .newsletter-form button { background: var(--gold); color: var(--navy); border: none; padding: 12px 20px; border-radius: 4px; font-weight: 800; font-family: 'Poppins', sans-serif; cursor: pointer; transition: transform 0.2s; }
+        .newsletter-form button:hover { transform: scale(1.05); }
+        .footer-bottom { border-top: 1px solid #2D3748; padding-top: 30px; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 20px;}
+        .footer-bottom p { color: #718096; font-size: 0.9rem; }
+        .social-icons { display: flex; gap: 15px; }
+        .social-icons a { color: var(--white); font-size: 1.2rem; background: #1A365D; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: all 0.3s; }
+        .social-icons a:hover { background: var(--gold); color: var(--navy); transform: translateY(-3px); }
+        .social-icons svg { width: 18px; height: 18px; fill: var(--white); transition: fill 0.3s; }
+        .social-icons a:hover svg { fill: var(--navy); }
+
         @media (max-width: 900px) { 
             .case-grid { grid-template-columns: 1fr; } 
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .footer-bottom { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
@@ -50,7 +74,7 @@
     </nav>
     
     <section class="container">
-        <h1 style="font-size: 3rem; margin-bottom: 20px; text-align: center;">Real Creators. Real Results.</h1>
+        <h1 style="font-size: 3rem; margin-bottom: 20px; text-align: center; font-family: 'Poppins', sans-serif; font-weight: 900; color: var(--navy);">Real Creators. Real Results.</h1>
         <p style="text-align: center; margin-bottom: 40px; color: var(--text-muted); font-size: 1.2rem;">Click any campaign to view the live project.</p>
 
         <!-- SECTION 1: MAJOR CROWDFUNDING -->
@@ -168,26 +192,4 @@
         </div>
 
         <!-- SECTION 4: GRANT FUNDED FILMS -->
-        <h2 class="section-title">Grant-Funded Films</h2>
-        <p class="section-subtitle">Examples of independent films brought to life through grant funding.</p>
-        <div class="case-grid">
-            <a href="https://houstonartsalliance.com/houston-filmmaking-team-filmatic-selected-for-nea-funded-soccer-documentary/" target="_blank" class="case-study">
-                <img src="images/film-cascarita.jpg" class="case-img" style="object-position: center;">
-                <p class="platform-tag tag-grant">NEA GRANT</p>
-                <h3>Cascarita</h3>
-                <div class="case-stats">
-                    <p>$30,000 <span>NEA Grant</span></p>
-                </div>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">A documentary exploring how soccer shapes community life in Houston, supported by the National Endowment for the Arts.</p>
-            </a>
-            <a href="https://www.screen.scot/news/2026/september/matrescence-receives-2026-documentary-fund-grant-from-sundance-institute" target="_blank" class="case-study">
-                <img src="images/film-matrescence.jpg" class="case-img" style="object-position: center;">
-                <p class="platform-tag tag-grant">SUNDANCE FUND</p>
-                <h3>Matrescence</h3>
-                <div class="case-stats">
-                    <p>Sundance <span>Doc Fund Grant</span></p>
-                </div>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">A feature documentary exploring the physical and psychological changes of motherhood, backed by Sundance Institute.</p>
-            </a>
-            <a href="https://festival.sundance.org/highlights/your-guide-to-the-2026-festival-projects-supported-by-sundance-institute-programs/" target="_blank" class="case-study">
-                <img
+        <h2 class="
