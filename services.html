@@ -35,6 +35,13 @@
         .service-visual:hover { transform: translateY(-5px); }
         .service-visual img { width: 100%; height: 300px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
         .service-visual h3 { color: var(--navy); font-size: 1.5rem; margin-bottom: 10px; font-family: 'Poppins', sans-serif; font-weight: 800;}
+
+        /* Integrated CTA inside Stage 4 */
+        .cta-box { background: var(--navy); padding: 40px; border-radius: 12px; text-align: center; margin-top: 40px; border: 2px solid var(--gold); box-shadow: 0 15px 30px rgba(10, 37, 64, 0.2);}
+        .cta-box h3 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 2rem; color: var(--white); margin-bottom: 15px; line-height: 1.1;}
+        .cta-box p { color: #A0AEC0; font-size: 1rem; margin-bottom: 25px; line-height: 1.6;}
+        .cta-btn { display: inline-block; background: var(--gold); color: var(--navy); padding: 15px 30px; border-radius: 6px; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1rem; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(245, 166, 35, 0.3);}
+        .cta-btn:hover { transform: translateY(-3px); background: var(--white); color: var(--navy); }
         
         /* FOOTER STYLES */
         footer { background: var(--navy); color: var(--white); padding: 80px 5% 30px 5%; border-top: 5px solid var(--gold); width: 100%; }
@@ -170,23 +177,19 @@
                 </div>
                 
                 <span class="price-tag">Long-term advisory plans available.</span>
-                <a href="contact.html" class="service-btn">Start Your Campaign <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
+
+                <!-- NEW CTA BOX IN PLACE OF EMPTY SPACE -->
+                <div class="cta-box">
+                    <h3>Ready to Reach Your Peak?</h3>
+                    <p>Stop guessing what works. Let our team build the strategy that gets you funded. Book a free 15-minute discovery call today.</p>
+                    <a href="contact.html" class="cta-btn">Book a Free Call <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
+                </div>
+
             </div>
             <div class="service-visual">
                 <img src="images/service-sustain.jpg" alt="Sustain and Community Strategy">
                 <h3>The Peak</h3>
             </div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA SECTION -->
-    <section style="padding: 80px 5%; background: var(--navy); text-align: center; border-top: 5px solid var(--gold);">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <h2 style="font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 3rem; color: var(--white); margin-bottom: 20px; line-height: 1.1;">Ready to Reach Your Peak?</h2>
-            <p style="color: #A0AEC0; font-size: 1.2rem; margin-bottom: 40px; line-height: 1.6;">Stop guessing what works. Let our team build the strategy that gets you funded. Book a free 15-minute discovery call today.</p>
-            <a href="contact.html" style="display: inline-block; background: var(--gold); color: var(--navy); padding: 18px 40px; border-radius: 6px; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.1rem; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(245, 166, 35, 0.3);">
-                Book a Free Call <i class="fa-solid fa-arrow-right" style="margin-left: 10px;"></i>
-            </a>
         </div>
     </section>
 
