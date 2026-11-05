@@ -13,17 +13,27 @@
         .service-row:nth-child(even) { flex-direction: row-reverse; }
         
         .service-text { flex: 1; }
+        
+        .service-badge { display: inline-block; background: var(--warm-ivory); color: var(--gold); font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 0.75rem; padding: 6px 12px; border-radius: 20px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; border: 1px solid #F5A623;}
+        
         .service-text h2 { font-size: 2.5rem; color: var(--navy); margin-bottom: 20px; display: flex; align-items: center; gap: 15px; font-family: 'Poppins', sans-serif; font-weight: 900;}
         .service-text h2 span { font-size: 4rem; color: transparent; -webkit-text-stroke: 2px var(--sky-blue); opacity: 0.6;}
         
         .service-text p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.7; }
-        .service-text ul { list-style: none; margin-top: 20px; }
-        .service-text li { margin-bottom: 15px; font-size: 1.05rem; color: var(--navy); padding-left: 30px; position: relative; font-weight: 500; }
-        .service-text li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: bold; font-size: 1.2rem; }
+        
+        /* Deliverable Badges */
+        .deliverables { display: flex; flex-wrap: wrap; gap: 10px; margin: 25px 0; }
+        .deliverables span { background: var(--white); color: var(--navy); font-size: 0.85rem; padding: 6px 12px; border-radius: 4px; font-weight: 600; border: 1px solid #E2E8F0; box-shadow: 0 2px 5px rgba(0,0,0,0.02);}
+        .deliverables span i { color: var(--sky-blue); margin-right: 5px; }
+        
+        .price-tag { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1rem; color: var(--navy); margin-bottom: 20px; display: block; background: #F0F4F8; padding: 10px 15px; border-radius: 4px; border-left: 3px solid var(--gold);}
+        
+        .service-btn { display: inline-block; background: var(--navy); color: var(--white); padding: 12px 25px; border-radius: 4px; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 0.95rem; transition: background 0.3s;}
+        .service-btn:hover { background: var(--gold); color: var(--navy); }
         
         .service-visual { flex: 1; background: var(--white); border-radius: 16px; padding: 20px; text-align: center; border: 1px solid #E2E8F0; box-shadow: 0 15px 40px rgba(0,0,0,0.06); transition: transform 0.3s;}
         .service-visual:hover { transform: translateY(-5px); }
-        .service-visual img { width: 100%; height: 250px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
+        .service-visual img { width: 100%; height: 300px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
         .service-visual h3 { color: var(--navy); font-size: 1.5rem; margin-bottom: 10px; font-family: 'Poppins', sans-serif; font-weight: 800;}
         
         /* FOOTER STYLES */
@@ -79,12 +89,19 @@
         <!-- STAGE 1: SECURE -->
         <div class="service-row">
             <div class="service-text">
+                <span class="service-badge">Best for: Filmmakers & Product Creators</span>
                 <h2><span>01</span> SECURE</h2>
                 <p><strong>The Foundation of Your Campaign.</strong> We handle the heavy lifting of finding the money. Whether it's crowdfunding or grants, we position your project as a prime candidate for funding.</p>
-                <ul>
-                    <li><strong>Crowdfunding Strategy:</strong> We build your pre-launch funnel, set up your campaign page, and manage your live campaign on Kickstarter, Indiegogo, Seed&Spark, and GoFundMe.</li>
-                    <li><strong>Grant Writing:</strong> We research and identify the perfect grants for your project (NEA, Sundance, etc.) and write compelling, winning proposals.</li>
-                </ul>
+                
+                <div class="deliverables">
+                    <span><i class="fa-solid fa-check"></i> Pre-Launch Funnel</span>
+                    <span><i class="fa-solid fa-check"></i> Grant Research</span>
+                    <span><i class="fa-solid fa-check"></i> Proposal Writing</span>
+                    <span><i class="fa-solid fa-check"></i> Budget Drafting</span>
+                </div>
+                
+                <span class="price-tag">Flexible packages available based on project scope.</span>
+                <a href="contact.html" class="service-btn">Start Your Campaign <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
             </div>
             <div class="service-visual">
                 <img src="images/service-fund.jpg" alt="Funding and Grants Strategy">
@@ -95,13 +112,19 @@
         <!-- STAGE 2: LAUNCH -->
         <div class="service-row">
             <div class="service-text">
+                <span class="service-badge">Best for: Launching New Ideas</span>
                 <h2><span>02</span> LAUNCH</h2>
                 <p><strong>Make Some Noise.</strong> You have the funding strategy; now we make sure the world knows about it. We create the visual and media assets that turn viewers into backers.</p>
-                <ul>
-                    <li><strong>Pitch Deck Design:</strong> We design investor-grade pitch decks that clearly communicate your vision and secure meetings.</li>
-                    <li><strong>Press Release & PR:</strong> We write and distribute media-ready announcements to get your project featured in relevant publications.</li>
-                    <li><strong>Campaign Video Strategy:</strong> We script and direct the core video assets that drive your campaign's conversion.</li>
-                </ul>
+                
+                <div class="deliverables">
+                    <span><i class="fa-solid fa-check"></i> Investor Pitch Deck</span>
+                    <span><i class="fa-solid fa-check"></i> Press Release</span>
+                    <span><i class="fa-solid fa-check"></i> Campaign Video Script</span>
+                    <span><i class="fa-solid fa-check"></i> Landing Page Copy</span>
+                </div>
+                
+                <span class="price-tag">Custom quotes tailored to your specific needs.</span>
+                <a href="contact.html" class="service-btn">Start Your Campaign <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
             </div>
             <div class="service-visual">
                 <img src="images/service-launch.jpg" alt="Launch and Design Strategy">
@@ -112,13 +135,19 @@
         <!-- STAGE 3: GROW -->
         <div class="service-row">
             <div class="service-text">
+                <span class="service-badge">Best for: Campaigns Already Live</span>
                 <h2><span>03</span> GROW</h2>
                 <p><strong>Scale Your Momentum.</strong> Launch day is just the beginning. We use paid ads and organic reach to build a massive wave of backers and keep the momentum going.</p>
-                <ul>
-                    <li><strong>Ads Management:</strong> We run highly targeted Meta (Facebook/Instagram) and Google ads to drive high-quality traffic to your campaign.</li>
-                    <li><strong>Social Media Marketing:</strong> We build your community, manage your social channels, and create engaging content to keep backers excited.</li>
-                    <li><strong>SEO Optimisation:</strong> We make sure your project gets found organically by people searching for what you're creating.</li>
-                </ul>
+                
+                <div class="deliverables">
+                    <span><i class="fa-solid fa-check"></i> Meta & Google Ads</span>
+                    <span><i class="fa-solid fa-check"></i> Social Media Management</span>
+                    <span><i class="fa-solid fa-check"></i> SEO Optimisation</span>
+                    <span><i class="fa-solid fa-check"></i> Email Marketing</span>
+                </div>
+                
+                <span class="price-tag">Retainer options designed to maximize your ROI.</span>
+                <a href="contact.html" class="service-btn">Start Your Campaign <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
             </div>
             <div class="service-visual">
                 <img src="images/service-grow.jpg" alt="Grow and Scale Strategy">
@@ -129,13 +158,19 @@
         <!-- STAGE 4: SUSTAIN -->
         <div class="service-row">
             <div class="service-text">
+                <span class="service-badge">Best for: Post-Campaign Growth</span>
                 <h2><span>04</span> SUSTAIN</h2>
                 <p><strong>Keep the Momentum Alive.</strong> Once the campaign ends, the real work begins. We help you convert your backers into long-term fans and customers.</p>
-                <ul>
-                    <li><strong>Investor Relations:</strong> We help you manage post-campaign communication with your backers and investors.</li>
-                    <li><strong>Community Management:</strong> We nurture your audience so they are ready to support your next launch.</li>
-                    <li><strong>Advisory:</strong> We provide long-term brand strategy and quarterly growth audits to ensure your business keeps growing.</li>
-                </ul>
+                
+                <div class="deliverables">
+                    <span><i class="fa-solid fa-check"></i> Investor Updates</span>
+                    <span><i class="fa-solid fa-check"></i> Community Management</span>
+                    <span><i class="fa-solid fa-check"></i> Brand Advisory</span>
+                    <span><i class="fa-solid fa-check"></i> Growth Audits</span>
+                </div>
+                
+                <span class="price-tag">Long-term advisory plans available.</span>
+                <a href="contact.html" class="service-btn">Start Your Campaign <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
             </div>
             <div class="service-visual">
                 <img src="images/service-sustain.jpg" alt="Sustain and Community Strategy">
