@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
         /* Hero Layout */
-        .hero { padding: 80px 5% 100px; text-align: left; display: flex; align-items: center; justify-content: space-between; gap: 50px; max-width: 1200px; margin: 0 auto; }
+        .hero { padding: 100px 5% 120px; text-align: left; display: flex; align-items: center; justify-content: space-between; gap: 50px; max-width: 1200px; margin: 0 auto; }
         .hero-content { flex: 1; }
         .hero-content h1 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 4.5rem; margin-bottom: 20px; line-height: 1.1; letter-spacing: -1px;}
         .hero-content p { font-size: 1.2rem; margin-bottom: 40px; color: var(--text-muted); }
@@ -23,8 +23,14 @@
         .hero-card .amount { font-size: 1.6rem; color: var(--gold); font-family: 'Poppins', sans-serif; font-weight: 900; }
         .hero-card .platform { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-family: 'Poppins', sans-serif; font-weight: 700;}
 
+        /* STATS BAR */
+        .stats-bar { background: var(--navy); padding: 50px 5%; display: flex; justify-content: center; gap: 80px; border-top: 3px solid var(--gold); border-bottom: 3px solid var(--gold); flex-wrap: wrap; }
+        .stat-item { text-align: center; }
+        .stat-item h3 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 3.5rem; color: var(--gold); line-height: 1; margin-bottom: 10px; }
+        .stat-item p { color: var(--white); font-family: 'Inter', sans-serif; font-weight: 500; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; }
+
         /* LIVE ACTIVITY TICKER */
-        .live-ticker { background: var(--warm-ivory); color: var(--navy); padding: 15px 5%; display: flex; align-items: center; overflow: hidden; border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .live-ticker { background: var(--warm-ivory); color: var(--navy); padding: 15px 5%; display: flex; align-items: center; overflow: hidden; border-bottom: 1px solid #E2E8F0; }
         .ticker-label { display: flex; align-items: center; gap: 10px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px; white-space: nowrap; background: var(--warm-ivory); padding-right: 20px; z-index: 2; color: var(--navy); }
         .pulse-dot { width: 10px; height: 10px; background: #4CAF50; border-radius: 50%; box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); animation: pulse 2s infinite; }
         .ticker-content { display: flex; white-space: nowrap; animation: scroll 25s linear infinite; gap: 40px; font-size: 0.95rem; font-family: 'Inter', sans-serif; font-weight: 500;}
@@ -33,25 +39,32 @@
         @keyframes pulse { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); } }
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        /* Sections */
-        .pillars-section { padding: 80px 5%; background: var(--white); text-align: center; }
-        .pillars-section h2 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 2.5rem; margin-bottom: 60px; color: var(--navy); line-height: 1.2; }
-        .pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        .pillar-card { background: var(--off-white); border-radius: 8px; overflow: hidden; text-align: left; transition: transform 0.3s; border: 1px solid #E2E8F0; }
-        .pillar-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
-        .pillar-card img { width: 100%; height: 250px; object-fit: cover; }
-        .pillar-content { padding: 30px; background: var(--white); border-top: 4px solid var(--gold); }
-        .pillar-content h3 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.4rem; margin-bottom: 15px; color: var(--navy); }
-        .pillar-content p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
+        /* BENTO BOX SERVICES */
+        .services-bento { padding: 100px 5%; background: var(--white); }
+        .services-header { text-align: center; max-width: 800px; margin: 0 auto 60px auto; }
+        .services-header h2 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 3rem; color: var(--navy); line-height: 1.1; margin-bottom: 20px;}
+        .services-header p { color: var(--text-muted); font-size: 1.2rem; }
+        
+        .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        
+        .bento-card { position: relative; border-radius: 12px; overflow: hidden; text-decoration: none; display: flex; flex-direction: column; justify-content: flex-end; padding: 40px; min-height: 450px; transition: transform 0.3s; }
+        .bento-card:hover { transform: translateY(-5px); }
+        .bento-card img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; transition: transform 0.5s; }
+        .bento-card:hover img { transform: scale(1.05); }
+        .bento-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(10, 37, 64, 0.95) 0%, rgba(10, 37, 64, 0.4) 100%); z-index: 1; }
+        .bento-content { position: relative; z-index: 2; }
+        .bento-content h3 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 1.8rem; color: var(--white); margin-bottom: 10px; text-transform: uppercase; }
+        .bento-content p { color: #E2E8F0; font-size: 1rem; line-height: 1.5; }
+        .bento-content .icon { font-size: 2.5rem; color: var(--gold); margin-bottom: 15px; }
 
         /* Platform Strip */
         .platform-strip { padding: 40px 5%; background: var(--navy); text-align: center; color: var(--white); display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
         .platform-strip p { font-family: 'Poppins', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; opacity: 0.8; }
 
         /* LIVE & PRELAUNCH SECTION */
-        .campaigns-section { padding: 80px 5%; background: transparent; text-align: center; }
-        .campaigns-section h2 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 2.5rem; margin-bottom: 20px; color: var(--navy); }
-        .campaigns-section p.subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .campaigns-section { padding: 100px 5%; background: transparent; text-align: center; }
+        .campaigns-section h2 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 3rem; margin-bottom: 20px; color: var(--navy); }
+        .campaigns-section p.subtitle { color: var(--text-muted); font-size: 1.2rem; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; }
 
         .campaign-group-title { font-family: 'Poppins', sans-serif; font-size: 1.8rem; color: var(--navy); margin-bottom: 30px; text-align: left; max-width: 1200px; margin-left: auto; margin-right: auto; display: flex; align-items: center; gap: 10px;}
         .campaign-group-title i { color: var(--gold); }
@@ -71,7 +84,7 @@
         .btn-portfolio { display: inline-block; margin-top: 20px; background: var(--gold); color: var(--navy); padding: 18px 40px; border-radius: 6px; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.1rem; transition: transform 0.3s, background 0.3s; box-shadow: 0 4px 15px rgba(245, 166, 35, 0.3); border: 2px solid var(--gold); }
         .btn-portfolio:hover { transform: translateY(-3px); background: var(--navy); color: var(--white); border-color: var(--navy); }
 
-        /* NEW DETAILED FOOTER */
+        /* DETAILED FOOTER */
         footer { background: var(--navy); color: var(--white); padding: 80px 5% 30px 5%; border-top: 5px solid var(--gold); }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; max-width: 1200px; margin: 0 auto 60px auto; }
         
@@ -103,7 +116,8 @@
             .hero-content h1 { font-size: 3rem; }
             .hero-btns { justify-content: center; }
             .hero-card { display: none; }
-            .pillars-grid { grid-template-columns: 1fr; }
+            .stats-bar { flex-direction: column; gap: 30px; }
+            .bento-grid { grid-template-columns: 1fr; }
             .platform-strip { flex-direction: column; gap: 15px; }
             .campaign-grid { grid-template-columns: 1fr 1fr; }
             .campaign-group-title { font-size: 1.5rem; text-align: center; justify-content: center;}
@@ -147,6 +161,22 @@
         </div>
     </header>
 
+    <!-- STATS BAR -->
+    <section class="stats-bar">
+        <div class="stat-item">
+            <h3>$10M+</h3>
+            <p>Raised</p>
+        </div>
+        <div class="stat-item">
+            <h3>500+</h3>
+            <p>Backers</p>
+        </div>
+        <div class="stat-item">
+            <h3>100+</h3>
+            <p>Grants Won</p>
+        </div>
+    </section>
+
     <!-- LIVE ACTIVITY TICKER -->
     <div class="live-ticker">
         <div class="ticker-label">
@@ -166,30 +196,40 @@
         </div>
     </div>
 
-    <section class="pillars-section">
-        <h2>Crowdfunding, grants, and marketing<br>all under one roof.</h2>
-        <div class="pillars-grid">
-            <div class="pillar-card">
+    <!-- BENTO BOX SERVICES -->
+    <section class="services-bento">
+        <div class="services-header">
+            <h2>Everything you need to launch, fund, and scale.</h2>
+            <p>We do not just advise you. We build the strategy, create the assets, and run the campaigns to get you funded.</p>
+        </div>
+        <div class="bento-grid">
+            <a href="services.html" class="bento-card">
                 <img src="images/service-fund.jpg" alt="Funding and Grants">
-                <div class="pillar-content">
+                <div class="bento-overlay"></div>
+                <div class="bento-content">
+                    <i class="fa-solid fa-mountain-sun icon"></i>
                     <h3>FUNDING & GRANTS</h3>
-                    <p>Crowdfunding strategy, grant research and writing, and business proposal preparation to secure your capital.</p>
+                    <p>Crowdfunding strategy, grant research and writing, and business proposals to secure your capital.</p>
                 </div>
-            </div>
-            <div class="pillar-card">
+            </a>
+            <a href="services.html" class="bento-card">
                 <img src="images/service-launch.jpg" alt="Launch and Design">
-                <div class="pillar-content">
+                <div class="bento-overlay"></div>
+                <div class="bento-content">
+                    <i class="fa-solid fa-rocket icon"></i>
                     <h3>LAUNCH & DESIGN</h3>
                     <p>Investor grade pitch decks, press releases, and campaign page design to make sure your project gets seen.</p>
                 </div>
-            </div>
-            <div class="pillar-card">
+            </a>
+            <a href="services.html" class="bento-card">
                 <img src="images/service-grow.jpg" alt="Grow and Scale">
-                <div class="pillar-content">
+                <div class="bento-overlay"></div>
+                <div class="bento-content">
+                    <i class="fa-solid fa-chart-line icon"></i>
                     <h3>GROW & SCALE</h3>
                     <p>SEO optimization, social media marketing, and paid ads management to drive momentum and hit your goals.</p>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 
@@ -268,16 +308,13 @@
         </div>
     </section>
 
-    <!-- NEW DETAILED FOOTER -->
+    <!-- DETAILED FOOTER -->
     <footer>
         <div class="footer-grid">
-            <!-- Brand Column -->
             <div class="footer-brand">
                 <h3>PEAKFUND ADVISORS</h3>
                 <p>We help filmmakers, creators, and founders secure the capital to bring bold ideas to life through crowdfunding, grants, and full stack growth strategy.</p>
             </div>
-
-            <!-- Links Column -->
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
@@ -288,8 +325,6 @@
                     <li><a href="contact.html">Book a Call</a></li>
                 </ul>
             </div>
-
-            <!-- Links Column -->
             <div class="footer-links">
                 <h4>Our Services</h4>
                 <ul>
@@ -300,8 +335,6 @@
                     <li><a href="services.html">Press Releases</a></li>
                 </ul>
             </div>
-
-            <!-- Newsletter Column -->
             <div class="footer-newsletter">
                 <h4>Stay Updated</h4>
                 <p>Get grant deadlines and crowdfunding tips monthly.</p>
@@ -315,7 +348,6 @@
         <div class="footer-bottom">
             <p>&copy; 2026 PEAKFUND ADVISORS. All rights reserved.</p>
             <div class="social-icons">
-                <!-- REPLACE THE '#' WITH YOUR ACTUAL LINKS -->
                 <a href="https://www.facebook.com/share/1DsnXw8TES/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
