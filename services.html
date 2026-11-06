@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | PEAKFUND ADVISORS</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -36,12 +40,10 @@
         .service-visual img { width: 100%; height: 300px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
         .service-visual h3 { color: var(--navy); font-size: 1.5rem; margin-bottom: 10px; font-family: 'Poppins', sans-serif; font-weight: 800;}
 
-        /* Integrated CTA inside Stage 4 */
-        .cta-box { background: var(--navy); padding: 40px; border-radius: 12px; text-align: center; margin-top: 40px; border: 2px solid var(--gold); box-shadow: 0 15px 30px rgba(10, 37, 64, 0.2);}
-        .cta-box h3 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 2rem; color: var(--white); margin-bottom: 15px; line-height: 1.1;}
-        .cta-box p { color: #A0AEC0; font-size: 1rem; margin-bottom: 25px; line-height: 1.6;}
-        .cta-btn { display: inline-block; background: var(--gold); color: var(--navy); padding: 15px 30px; border-radius: 6px; text-decoration: none; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1rem; transition: transform 0.3s; box-shadow: 0 4px 15px rgba(245, 166, 35, 0.3);}
-        .cta-btn:hover { transform: translateY(-3px); background: var(--white); color: var(--navy); }
+        /* The new clean CTA text */
+        .cta-text-container { margin-top: 40px; padding-top: 20px; border-top: 1px solid #E2E8F0;}
+        .cta-text-container h3 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 1.8rem; color: var(--navy); margin-bottom: 10px; line-height: 1.1;}
+        .cta-text-container p { color: var(--text-muted); font-size: 1rem; margin-bottom: 0; line-height: 1.6;}
         
         /* FOOTER STYLES */
         footer { background: var(--navy); color: var(--white); padding: 80px 5% 30px 5%; border-top: 5px solid var(--gold); width: 100%; }
@@ -177,12 +179,12 @@
                 </div>
                 
                 <span class="price-tag">Long-term advisory plans available.</span>
+                <a href="contact.html" class="service-btn" style="margin-bottom: 20px;">Start Your Campaign <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
 
-                <!-- NEW CTA BOX IN PLACE OF EMPTY SPACE -->
-                <div class="cta-box">
+                <!-- CLEAN CTA TEXT DIRECTLY IN THE SPACE -->
+                <div class="cta-text-container">
                     <h3>Ready to Reach Your Peak?</h3>
                     <p>Stop guessing what works. Let our team build the strategy that gets you funded. Book a free 15-minute discovery call today.</p>
-                    <a href="contact.html" class="cta-btn">Book a Free Call <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
                 </div>
 
             </div>
