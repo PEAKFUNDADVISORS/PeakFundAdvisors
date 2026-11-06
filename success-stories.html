@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Stories | PEAKFUND ADVISORS</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .testimonial-section { padding: 80px 5%; background: transparent; max-width: 1200px; margin: 0 auto; }
+        
+        .testimonial-hero { text-align: center; margin-bottom: 60px; }
+        .testimonial-hero h1 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 3.5rem; color: var(--navy); margin-bottom: 20px; line-height: 1.1;}
+        .testimonial-hero p { color: var(--text-muted); font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+
+        .testimonial-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        
+        .testimonial-card { background: var(--white); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #E2E8F0; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s;}
+        .testimonial-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+        
+        .quote-icon { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; opacity: 0.3; }
+        .testimonial-text { font-size: 1.1rem; color: var(--navy); font-style: italic; line-height: 1.8; margin-bottom: 30px; }
+        
+        .client-info { display: flex; align-items: center; gap: 15px; border-top: 1px solid #E2E8F0; padding-top: 20px; }
+        .client-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; background: var(--sky-blue); color: var(--white); display: flex; align-items: center; justify-content: center; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.5rem;}
+        .client-details h4 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1rem; color: var(--navy); margin-bottom: 2px; }
+        .client-details p { font-size: 0.85rem; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;}
+
+        .cta-full-width { padding: 80px 5% 100px 5%; background: transparent; text-align: center; }
+        .cta-full-width h3 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 3rem; color: var(--navy); margin-bottom: 20px; line-height: 1.1; }
+        .cta-full-width p { color: var(--text-muted); font-size: 1.2rem; max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6; }
+        .cta-full-width .btn { background: var(--gold); color: var(--navy); padding: 18px 40px; border-radius: 6px; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.1rem; text-decoration: none; display: inline-block; transition: transform 0.3s, background 0.3s; box-shadow: 0 4px 15px rgba(245, 166, 35, 0.3); border: 2px solid var(--gold); }
+        .cta-full-width .btn:hover { transform: translateY(-3px); background: var(--navy); color: var(--white); border-color: var(--navy); }
+
+        /* FOOTER STYLES */
+        footer { background: var(--navy); color: var(--white); padding: 80px 5% 30px 5%; border-top: 5px solid var(--gold); width: 100%; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; max-width: 1200px; margin: 0 auto 60px auto; }
+        .footer-brand h3 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 1.8rem; color: var(--gold); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;}
+        .footer-brand p { color: #A0AEC0; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+        .footer-links h4, .footer-newsletter h4 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.1rem; margin-bottom: 20px; color: var(--white); text-transform: uppercase; letter-spacing: 1px;}
+        .footer-links ul { list-style: none; padding: 0; margin: 0;}
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: #A0AEC0; text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--gold); padding-left: 5px; }
+        .footer-newsletter p { color: #A0AEC0; font-size: 0.95rem; margin-bottom: 15px; }
+        .newsletter-form { display: flex; gap: 10px; }
+        .newsletter-form input { flex: 1; padding: 12px; border-radius: 4px; border: 1px solid #2D3748; background: #1A365D; color: var(--white); font-family: 'Inter', sans-serif; outline: none; }
+        .newsletter-form input::placeholder { color: #718096; }
+        .newsletter-form button { background: var(--gold); color: var(--navy); border: none; padding: 12px 20px; border-radius: 4px; font-weight: 800; font-family: 'Poppins', sans-serif; cursor: pointer; transition: transform 0.2s; }
+        .newsletter-form button:hover { transform: scale(1.05); }
+        .footer-bottom { border-top: 1px solid #2D3748; padding-top: 30px; display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 20px;}
+        .footer-bottom p { color: #718096; font-size: 0.9rem; }
+        .social-icons { display: flex; gap: 15px; }
+        .social-icons a { color: var(--white); font-size: 1.2rem; background: #1A365D; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: all 0.3s; }
+        .social-icons a:hover { background: var(--gold); color: var(--navy); transform: translateY(-3px); }
+        .social-icons svg { width: 18px; height: 18px; fill: var(--white); transition: fill 0.3s; }
+        .social-icons a:hover svg { fill: var(--navy); }
+
+        @media (max-width: 900px) { 
+            .testimonial-grid { grid-template-columns: 1fr; }
+            .testimonial-hero h1 { font-size: 2.5rem; }
+            .cta-full-width h3 { font-size: 2rem; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="PeakFund Advisors"></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="past-success.html">Past Success</a>
+            <a href="success-stories.html">Success Stories</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="btn">Book a Call</a>
+        </div>
+    </nav>
+
+    <section class="testimonial-section">
+        <div class="testimonial-hero">
+            <h1>What Our Clients Say</h1>
+            <p>Don't just take our word for it. Hear from the creators, founders, and filmmakers who have successfully funded their projects with our help.</p>
+        </div>
+
+        <div class="testimonial-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div>
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">"Working with PEAKFUND was a game changer. We were stuck at 30% of our funding goal until they stepped in. Their ad strategy and community management pushed us past 200% in the final week. I can't recommend them enough."</p>
+                </div>
+                <div class="client-info">
+                    <div class="client-img">JD</div>
+                    <div class="client-details">
+                        <h4>John Doe</h4>
+                        <p>Filmmaker</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div>
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">"The grant writing team is phenomenal. I had the vision but no idea how to structure the proposal. They handled the research and writing flawlessly, and we secured a $30,000 grant for our documentary."</p>
+                </div>
+                <div class="client-info">
+                    <div class="client-img">AS</div>
+                    <div class="client-details">
+                        <h4>Alex Smith</h4>
+                        <p>Documentary Director</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div>
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">"I was overwhelmed by the idea of launching a Kickstarter. PEAKFUND built my pitch deck, designed my campaign page, and even ran my Meta ads. They took all the stress away and we hit our goal in 48 hours."</p>
+                </div>
+                <div class="client-info">
+                    <div class="client-img">MK</div>
+                    <div class="client-details">
+                        <h4>Mary Kate</h4>
+                        <p>Product Creator</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+                <div>
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p class="testimonial-text">"Their strategic guidance was invaluable. They didn't just give me generic advice; they looked at my specific niche and built a custom plan. The ROI on their services was 10x what I paid."</p>
+                </div>
+                <div class="client-info">
+                    <div class="client-img">TB</div>
+                    <div class="client-details">
+                        <h4>Thomas B.</h4>
+                        <p>Indie Game Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-full-width">
+        <h3>Ready to Write Your Success Story?</h3>
+        <p>Stop guessing what works. Let our team build the strategy that gets you funded. Book a free 15-minute discovery call today.</p>
+        <a href="contact.html" class="btn">Book a Free Call <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
+    </section>
+
+    <!-- DETAILED FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>PEAKFUND ADVISORS</h3>
+                <p>We help filmmakers, creators, and founders secure the capital to bring bold ideas to life through crowdfunding, grants, and full stack growth strategy.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="past-success.html">Past Success</a></li>
+                    <li><a href="success-stories.html">Success Stories</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Book a Call</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html">Crowdfunding</a></li>
+                    <li><a href="services.html">Grant Writing</a></li>
+                    <li><a href="services.html">Pitch Decks</a></li>
+                    <li><a href="services.html">Ads Management</a></li>
+                    <li><a href="services.html">Press Releases</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Get grant deadlines and crowdfunding tips monthly.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 PEAKFUND ADVISORS. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/1DsnXw8TES/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank" aria-label="Fiverr">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.6 2.6h-3.4c-1.6 0-2.9 1.3-2.9 2.9v2.1h-5.1v-2c0-1.7 1.3-3 3-3h3V0h-3c-2.8 0-5.1 2.3-5.1 5.1v2.5H3.4V5.1h3V2.6h-3C1.5 2.6.2 3.9.2 5.5v13.9c0 1.6 1.3 2.9 2.9 2.9h3.5v-2.5h-3v-8.7h5.1v8.7c0 1.6 1.3 2.9 2.9 2.9h3.4v-2.5h-3.4c-.2 0-.4-.2-.4-.4V7.6h5.5c1.6 0 2.9-1.3 2.9-2.9V2.6z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
