@@ -40,10 +40,48 @@
         .service-visual img { width: 100%; height: 300px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
         .service-visual h3 { color: var(--navy); font-size: 1.5rem; margin-bottom: 10px; font-family: 'Poppins', sans-serif; font-weight: 800;}
 
-        /* The new clean CTA text */
-        .cta-text-container { margin-top: 40px; padding-top: 20px; border-top: 1px solid #E2E8F0;}
-        .cta-text-container h3 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 1.8rem; color: var(--navy); margin-bottom: 10px; line-height: 1.1;}
-        .cta-text-container p { color: var(--text-muted); font-size: 1rem; margin-bottom: 0; line-height: 1.6;}
+        /* FULL WIDTH CTA SECTION */
+        .cta-full-width { 
+            width: 100%; 
+            padding: 80px 5% 100px 5%; 
+            background: transparent; 
+            text-align: center;
+        }
+        .cta-full-width h3 { 
+            font-family: 'Poppins', sans-serif; 
+            font-weight: 900; 
+            font-size: 3rem; 
+            color: var(--navy); 
+            margin-bottom: 20px; 
+            line-height: 1.1;
+        }
+        .cta-full-width p { 
+            color: var(--text-muted); 
+            font-size: 1.2rem; 
+            max-width: 800px;
+            margin: 0 auto 40px auto; 
+            line-height: 1.6;
+        }
+        .cta-full-width .btn { 
+            background: var(--gold); 
+            color: var(--navy); 
+            padding: 18px 40px; 
+            border-radius: 6px; 
+            font-family: 'Poppins', sans-serif; 
+            font-weight: 800; 
+            font-size: 1.1rem; 
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s, background 0.3s;
+            box-shadow: 0 4px 15px rgba(245, 166, 35, 0.3);
+            border: 2px solid var(--gold);
+        }
+        .cta-full-width .btn:hover { 
+            transform: translateY(-3px); 
+            background: var(--navy); 
+            color: var(--white); 
+            border-color: var(--navy);
+        }
         
         /* FOOTER STYLES */
         footer { background: var(--navy); color: var(--white); padding: 80px 5% 30px 5%; border-top: 5px solid var(--gold); width: 100%; }
@@ -74,6 +112,7 @@
             .service-text h2 { font-size: 2rem; } 
             .service-visual { width: 100%; padding: 15px; }
             .service-visual img { height: 200px; }
+            .cta-full-width h3 { font-size: 2rem; }
             .footer-grid { grid-template-columns: 1fr; text-align: center; }
             .footer-bottom { flex-direction: column; text-align: center; }
         }
@@ -179,20 +218,20 @@
                 </div>
                 
                 <span class="price-tag">Long-term advisory plans available.</span>
-                <a href="contact.html" class="service-btn" style="margin-bottom: 20px;">Start Your Campaign <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
-
-                <!-- CLEAN CTA TEXT DIRECTLY IN THE SPACE -->
-                <div class="cta-text-container">
-                    <h3>Ready to Reach Your Peak?</h3>
-                    <p>Stop guessing what works. Let our team build the strategy that gets you funded. Book a free 15-minute discovery call today.</p>
-                </div>
-
+                <a href="contact.html" class="service-btn">Start Your Campaign <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
             </div>
             <div class="service-visual">
                 <img src="images/service-sustain.jpg" alt="Sustain and Community Strategy">
                 <h3>The Peak</h3>
             </div>
         </div>
+    </section>
+
+    <!-- FULL WIDTH CTA SECTION -->
+    <section class="cta-full-width">
+        <h3>Ready to Reach Your Peak?</h3>
+        <p>Stop guessing what works. Let our team build the strategy that gets you funded. Book a free 15-minute discovery call today.</p>
+        <a href="contact.html" class="btn">Book a Free Call <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
     </section>
 
     <!-- DETAILED FOOTER -->
