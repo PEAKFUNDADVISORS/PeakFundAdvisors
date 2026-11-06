@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
         /* Contact Form Styling */
-        .contact-section { padding: 80px 5%; background: transparent; }
-        .contact-container { max-width: 800px; margin: 0 auto; background: var(--white); padding: 50px; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); border: 1px solid #E2E8F0; }
+        .contact-section { padding: 80px 5%; background: transparent; display: flex; justify-content: center; }
+        .contact-container { width: 100%; max-width: 800px; background: var(--white); padding: 50px; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); border: 1px solid #E2E8F0; }
         
         .contact-header { text-align: center; margin-bottom: 40px; }
-        .contact-header h1 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 2.5rem; color: var(--navy); margin-bottom: 15px; }
+        .contact-header h1 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 2.5rem; color: var(--navy); margin-bottom: 15px; line-height: 1.2;}
         .contact-header p { color: var(--text-muted); font-size: 1.1rem; }
 
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -58,7 +58,6 @@
             transition: background 0.3s, transform 0.2s;
             margin-top: 20px;
             text-align: center;
-            text-decoration: none;
         }
         .btn-submit:hover { background: var(--navy); color: var(--white); transform: translateY(-2px); }
 
@@ -137,4 +136,89 @@
                     <!-- Project Name -->
                     <div class="form-group">
                         <label for="project">Project Name</label>
-                        <input type="text" id="project" name
+                        <input type="text" id="project" name="project" placeholder="Your Film / Product Name" required>
+                    </div>
+
+                    <!-- Service Selection -->
+                    <div class="form-group">
+                        <label for="service">Service Needed</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Select a service...</option>
+                            <option value="Crowdfunding Strategy">Crowdfunding Strategy</option>
+                            <option value="Grant Writing">Grant Writing</option>
+                            <option value="Pitch Deck Design">Pitch Deck Design</option>
+                            <option value="Press Release">Press Release</option>
+                            <option value="Ads Management">Ads Management</option>
+                            <option value="Full Campaign Management">Full Campaign Management</option>
+                            <option value="Not Sure Yet">Not Sure Yet</option>
+                        </select>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="form-group full-width">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your project and what you need help with..." required></textarea>
+                    </div>
+                </div>
+
+                <!-- Send Email Button -->
+                <button type="submit" class="btn-submit">
+                    Send Email <i class="fa-solid fa-paper-plane" style="margin-left: 10px;"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- DETAILED FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>PEAKFUND ADVISORS</h3>
+                <p>We help filmmakers, creators, and founders secure the capital to bring bold ideas to life through crowdfunding, grants, and full stack growth strategy.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="success-stories.html">Success Stories</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Book a Call</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html">Crowdfunding</a></li>
+                    <li><a href="services.html">Grant Writing</a></li>
+                    <li><a href="services.html">Pitch Decks</a></li>
+                    <li><a href="services.html">Ads Management</a></li>
+                    <li><a href="services.html">Press Releases</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Get grant deadlines and crowdfunding tips monthly.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 PEAKFUND ADVISORS. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/1DsnXw8TES/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank" aria-label="Fiverr">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.6 2.6h-3.4c-1.6 0-2.9 1.3-2.9 2.9v2.1h-5.1v-2c0-1.7 1.3-3 3-3h3V0h-3c-2.8 0-5.1 2.3-5.1 5.1v2.5H3.4V5.1h3V2.6h-3C1.5 2.6.2 3.9.2 5.5v13.9c0 1.6 1.3 2.9 2.9 2.9h3.5v-2.5h-3v-8.7h5.1v8.7c0 1.6 1.3 2.9 2.9 2.9h3.4v-2.5h-3.4c-.2 0-.4-.2-.4-.4V7.6h5.5c1.6 0 2.9-1.3 2.9-2.9V2.6z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
