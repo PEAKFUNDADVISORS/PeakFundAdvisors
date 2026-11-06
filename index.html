@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEAKFUND ADVISORS | From Vision to Funding</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -373,27 +377,4 @@
             { img: "images/urxr.jpg", platform: "Kickstarter Campaign", title: "URXR Spatial Glasses", amount: "$1,378,069 Raised" },
             { img: "images/x1.jpg", platform: "Kickstarter Campaign", title: "X1 Lite Laser", amount: "HK$ 10.2M Raised" },
             { img: "images/zendure.jpg", platform: "Indiegogo Campaign", title: "Zendure SuperBase V", amount: "$5,438,805 Raised" },
-            { img: "images/timemore.jpg", platform: "Indiegogo Campaign", title: "Timemore Grinder", amount: "S$6,855,991 Raised" },
-            { img: "images/dc.jpg", platform: "Kickstarter Campaign", title: "DC Green Lantern", amount: "$1,337,480 Raised" },
-            { img: "images/seed-168.jpg", platform: "Seed&Spark Campaign", title: "168 Hours", amount: "Funded" },
-            { img: "images/seed-rez.jpg", platform: "Seed&Spark Campaign", title: "Rez", amount: "Funded" },
-            { img: "images/seed-precious.jpg", platform: "Seed&Spark Campaign", title: "Precious Time", amount: "Funded" },
-            { img: "images/gofundme-lila.jpg", platform: "GoFundMe Campaign", title: "For Our Little Lila", amount: "Funded" },
-            { img: "images/gofundme-arthur.jpg", platform: "GoFundMe Campaign", title: "Arthur's Student Film", amount: "Funded" },
-            { img: "images/gofundme-aquaterra.jpg", platform: "GoFundMe Campaign", title: "AquaTerra Charity", amount: "Funded" },
-            { img: "images/film-cascarita.jpg", platform: "NEA Grant", title: "Cascarita", amount: "$30,000 Grant" },
-            { img: "images/film-matrescence.jpg", platform: "Sundance Grant", title: "Matrescence", amount: "Doc Fund Grant" },
-            { img: "images/film-ancestors.jpg", platform: "Sundance Grant", title: "Ancestors", amount: "Doc Fund Grant" }
-        ];
-
-        let currentIndex = 0;
-        const cardImg = document.getElementById("card-img");
-        const cardPlatform = document.getElementById("card-platform");
-        const cardTitle = document.getElementById("card-title");
-        const cardAmount = document.getElementById("card-amount");
-
-        function changeCard() {
-            document.getElementById("dynamic-card").style.opacity = 0;
-            setTimeout(() => {
-                currentIndex = (currentIndex + 1) % campaigns.length;
-                card
+            { img: "images/timemore.jpg
