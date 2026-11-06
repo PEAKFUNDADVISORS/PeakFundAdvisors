@@ -12,10 +12,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Contact Form Styling */
-        .contact-section { padding: 80px 5%; background: transparent; display: flex; justify-content: center; }
-        .contact-container { width: 100%; max-width: 800px; background: var(--white); padding: 50px; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); border: 1px solid #E2E8F0; }
+        /* Contact Layout Grid */
+        .contact-wrapper { 
+            padding: 80px 5%; 
+            background: transparent; 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 50px; 
+            max-width: 1300px; 
+            margin: 0 auto; 
+            align-items: start;
+        }
         
+        /* Form Styling */
+        .contact-container { background: var(--white); padding: 50px; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.08); border: 1px solid #E2E8F0; }
         .contact-header { text-align: center; margin-bottom: 40px; }
         .contact-header h1 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 2.5rem; color: var(--navy); margin-bottom: 15px; line-height: 1.2;}
         .contact-header p { color: var(--text-muted); font-size: 1.1rem; }
@@ -26,40 +36,37 @@
         
         .form-group label { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--navy); margin-bottom: 8px; }
         .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            border-radius: 6px;
-            border: 1px solid #CBD5E0;
-            background: #F8FAFC;
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            color: var(--navy);
-            transition: border-color 0.3s, box-shadow 0.3s;
+            width: 100%; padding: 15px; border-radius: 6px; border: 1px solid #CBD5E0; background: #F8FAFC;
+            font-family: 'Inter', sans-serif; font-size: 1rem; color: var(--navy); transition: border-color 0.3s, box-shadow 0.3s;
         }
         .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--sky-blue);
-            box-shadow: 0 0 0 3px rgba(74, 158, 255, 0.2);
+            outline: none; border-color: var(--sky-blue); box-shadow: 0 0 0 3px rgba(74, 158, 255, 0.2);
         }
         .form-group textarea { resize: vertical; min-height: 120px; }
 
         .btn-submit {
-            display: inline-block;
-            width: 100%;
-            background: var(--gold);
-            color: var(--navy);
-            padding: 18px;
-            border: none;
-            border-radius: 6px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 800;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background 0.3s, transform 0.2s;
-            margin-top: 20px;
-            text-align: center;
+            display: inline-block; width: 100%; background: var(--gold); color: var(--navy); padding: 18px;
+            border: none; border-radius: 6px; font-family: 'Poppins', sans-serif; font-weight: 800;
+            font-size: 1.1rem; cursor: pointer; transition: background 0.3s, transform 0.2s; margin-top: 20px; text-align: center;
         }
         .btn-submit:hover { background: var(--navy); color: var(--white); transform: translateY(-2px); }
+
+        /* Contact Info Side Styling */
+        .contact-info-side { display: flex; flex-direction: column; gap: 20px; padding-top: 30px; }
+        .contact-info-side h2 { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 2.5rem; color: var(--navy); margin-bottom: 10px; line-height: 1.1;}
+        .contact-info-side > p { color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px; }
+        
+        .info-card { background: var(--white); padding: 25px; border-radius: 8px; border: 1px solid #E2E8F0; display: flex; align-items: flex-start; gap: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); transition: transform 0.3s; text-decoration: none; }
+        .info-card:hover { transform: translateY(-3px); border-color: var(--sky-blue); }
+        
+        .info-icon { background: #F0F4F8; color: var(--gold); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
+        .info-text h4 { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--navy); margin-bottom: 5px; }
+        .info-text p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
+        
+        /* Social Buttons */
+        .social-links-contact { display: flex; gap: 15px; margin-top: 10px; }
+        .social-links-contact a { color: var(--white); background: var(--navy); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; text-decoration: none; transition: all 0.3s; }
+        .social-links-contact a:hover { background: var(--gold); color: var(--navy); transform: translateY(-3px); }
 
         /* FOOTER STYLES */
         footer { background: var(--navy); color: var(--white); padding: 80px 5% 30px 5%; border-top: 5px solid var(--gold); width: 100%; }
@@ -86,6 +93,7 @@
         .social-icons a:hover svg { fill: var(--navy); }
 
         @media (max-width: 900px) { 
+            .contact-wrapper { grid-template-columns: 1fr; padding: 40px 5%; }
             .form-grid { grid-template-columns: 1fr; }
             .form-group.full-width { grid-column: span 1; }
             .contact-container { padding: 30px; }
@@ -107,11 +115,12 @@
         </div>
     </nav>
 
-    <section class="contact-section">
+    <section class="contact-wrapper">
+        <!-- LEFT SIDE: CONTACT FORM -->
         <div class="contact-container">
             <div class="contact-header">
                 <h1>Let's Talk About Your Project</h1>
-                <p>Ready to climb? Fill out the form below and our team will get back to you within 24 hours.</p>
+                <p>Fill out the form below and our team will get back to you within 24 hours.</p>
             </div>
 
             <form action="#" method="POST">
@@ -168,6 +177,53 @@
                 </button>
             </form>
         </div>
+
+        <!-- RIGHT SIDE: CONTACT INFO & SOCIALS -->
+        <div class="contact-info-side">
+            <h2>Other Ways to Reach Us</h2>
+            <p>Prefer to reach out directly? We are always available to chat about your next big idea.</p>
+            
+            <!-- Email 1 -->
+            <a href="mailto:zulaikhor@peakfundadvisors.online" class="info-card">
+                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="info-text">
+                    <h4>Business Inquiries</h4>
+                    <p>zulaikhor@peakfundadvisors.online</p>
+                </div>
+            </a>
+
+            <!-- Email 2 -->
+            <a href="mailto:peakfundadvisors@gmail.com" class="info-card">
+                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="info-text">
+                    <h4>General Support</h4>
+                    <p>peakfundadvisors@gmail.com</p>
+                </div>
+            </a>
+
+            <!-- Location -->
+            <div class="info-card">
+                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="info-text">
+                    <h4>Our Location</h4>
+                    <p>Remote (Global)<br>Working with creators worldwide.</p>
+                </div>
+            </div>
+
+            <!-- Socials -->
+            <div style="margin-top: 20px;">
+                <h4 style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--navy); margin-bottom: 15px;">Connect With Us</h4>
+                <div class="social-links-contact">
+                    <a href="https://www.facebook.com/share/1DsnXw8TES/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/peakfund_advisors/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.fiverr.com/zulaikhorpeak" target="_blank" aria-label="Fiverr">
+                        <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: var(--navy); transition: fill 0.3s;" onmouseover="this.style.fill='var(--navy)'" onmouseout="this.style.fill='var(--navy)'">
+                            <path d="M22.6 2.6h-3.4c-1.6 0-2.9 1.3-2.9 2.9v2.1h-5.1v-2c0-1.7 1.3-3 3-3h3V0h-3c-2.8 0-5.1 2.3-5.1 5.1v2.5H3.4V5.1h3V2.6h-3C1.5 2.6.2 3.9.2 5.5v13.9c0 1.6 1.3 2.9 2.9 2.9h3.5v-2.5h-3v-8.7h5.1v8.7c0 1.6 1.3 2.9 2.9 2.9h3.4v-2.5h-3.4c-.2 0-.4-.2-.4-.4V7.6h5.5c1.6 0 2.9-1.3 2.9-2.9V2.6z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- DETAILED FOOTER -->
@@ -212,9 +268,9 @@
             <p>&copy; 2026 PEAKFUND ADVISORS. All rights reserved.</p>
             <div class="social-icons">
                 <a href="https://www.facebook.com/share/1DsnXw8TES/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/peakfund_advisors/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" target="_blank" aria-label="Fiverr">
+                <a href="https://www.fiverr.com/zulaikhorpeak" target="_blank" aria-label="Fiverr">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22.6 2.6h-3.4c-1.6 0-2.9 1.3-2.9 2.9v2.1h-5.1v-2c0-1.7 1.3-3 3-3h3V0h-3c-2.8 0-5.1 2.3-5.1 5.1v2.5H3.4V5.1h3V2.6h-3C1.5 2.6.2 3.9.2 5.5v13.9c0 1.6 1.3 2.9 2.9 2.9h3.5v-2.5h-3v-8.7h5.1v8.7c0 1.6 1.3 2.9 2.9 2.9h3.4v-2.5h-3.4c-.2 0-.4-.2-.4-.4V7.6h5.5c1.6 0 2.9-1.3 2.9-2.9V2.6z"/>
                     </svg>
